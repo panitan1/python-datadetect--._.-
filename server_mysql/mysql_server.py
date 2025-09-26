@@ -2,7 +2,7 @@ import json
 import mysql.connector
 import threading
 import requests
-from master_log.master_log import MasterLog
+from Master_log.master_log import MasterLog
 
 class datasql(MasterLog):
     def __init__(self):

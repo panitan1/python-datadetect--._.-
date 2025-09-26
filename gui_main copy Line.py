@@ -1,7 +1,8 @@
+import math
 import customtkinter as ctk
 from CTkMessagebox import CTkMessagebox
 from CTkMenuBar import *
-from PIL import Image
+from PIL import Image, ImageTk
 import webbrowser
 import numpy as np
 import pytz
@@ -9,33 +10,32 @@ import cv2
 import sys
 import os
 import threading
-from ultralytics import YOLO 
-from ultralytics.utils.plotting import Annotator
+from ultralytics import YOLO ,solutions
+from ultralytics.utils.plotting import Annotator , Colors 
 from datetime import datetime ,timedelta
 import time
-from ultralytics.utils import ThreadingLocked
-from server_mysql.mysql_server import insert  , login_data
-import uuid
+from server_mysql.mysql_server import datasql ,Loginpy
 from win10toast_click import ToastNotifier
-from multiprocessing import Process
-
-
-
+from server_mysql.mysql_server import MasterLog
+import re
+import json
+from queue import Queue
 ctk.set_appearance_mode("System")
 ctk.set_default_color_theme("green")
-
+ctk.deactivate_automatic_dpi_awareness()
+ctk.set_window_scaling(1.0)
+ctk.set_widget_scaling(1.0)
 class APP_SY_Frame(ctk.CTkFrame):
     def __init__(self , master):
         super().__init__(master)
-        self.master = master
-        self.cam01 = cv2.VideoCapture("vidio\\test11.mp4")
-        self.cam02 = cv2.VideoCapture("vidio\\test22.mp4")
-        self.model = YOLO("yolov8x.pt").cuda()
-        self.model_page = YOLO("gui\\best.pt").cuda()
-        self.model22 = YOLO("yolov8x.pt").cuda()
-        self.model_page22 = YOLO("gui\\best copy.pt").cuda()
+        self.master = master          
+        self.show_loading_popup()
+        # ctk.set_widget_scaling(0.8)
+        ctk.set_window_scaling(1.0)
+        ctk.set_widget_scaling(1.0)
+        ctk.deactivate_automatic_dpi_awareness()
         self.save_lock = threading.Lock()
-        self.save_lock2 = threading.Lock()
+        self.user_email = self.master.user_info
         self.Time_CM1_MO1 = None  # เพิ่มตัวแปรสำหรับเก็บเวลา
         self.Time_CM2_MO1 = None  # เพิ่มตัวแปรสำหรับเก็บเวลา
         self.Time_CM1_MO2 = None  # เพิ่มตัวแปรสำหรับเก็บเวลา
@@ -44,21 +44,51 @@ class APP_SY_Frame(ctk.CTkFrame):
         self.CM2_Model1_list = []  # เก็บภาพรถจาก Cam02
         self.CM1_Model2_list = []
         self.CM2_Model2_list = []
-        self.CM1_M1_M2_Path = []
-        self.CM2_M1_M2_Path = []
+        self.CM1_M1_M2_Path = set()
+        self.CM2_M1_M2_Path = set()
+        self.CM1_M1_M2_Path_the_one = set()
+        self.CM2_M1_M2_Path_the_one = set()
         self.period = None
-        self.Line1 =  np.array([[169, 771], [1343, 488]])
-        self.Line2 = np.array([[1732, 834], [678, 545]])
+        self.Line1 =  np.array([[163, 679], [1672, 191]])
+        self.Line2 =  np.array([[1695, 863], [416, 325]])
+        self.track_color = {}
+        self.Check_Line = False
+
         self.MuNuAPP_main()
         self.Main_CV2()
-        # self.My_cap1()              # ✅ สร้าง self.My_run_cam1 ก่อน
-        # self.My_cap2()
         self.My_show_ui_My_cap1()
         self.My_show_ui_My_cap2()
         self.start_cam()
         
-
         
+        self.CM2_Model1_and_Model2_list = {}
+        self.CM1_Model1_and_Model2_list = {}
+        self.Supper_check_c1_List = []
+        self.Supper_check_c2_List = []
+
+        self.Check_Cam1_ = True
+        self.Check_Cam2_ = True
+        self.sent_save1 = False
+        self.contro_Save2 = False
+        self.Time_cm1_Model1 = None
+        self.Time_cm2_Model1 = None
+        self.Time_cam2_oj = None
+        self.Time_cam1_oj = None
+        
+
+
+        self.im_save_CHECK_Id_model1_cm1 = set()
+        self.im_save_CHECK_Id_model1_cm2 = set()
+        
+        self.queue_cam1 = Queue(maxsize=5)
+        self.queue_cam2 = Queue(maxsize=5)
+        self.My_checkOut_cm1 = {} 
+        self.My_checkOut_cm2 = {} 
+        self.db = datasql()
+        self.master_log_set = MasterLog()
+        
+        
+
     def MuNuAPP_main(self):
         self.munubar = CTkMenuBar(self)
         self.buttun01 = self.munubar.add_cascade("Munu")
@@ -82,17 +112,17 @@ class APP_SY_Frame(ctk.CTkFrame):
         self.dropdown2.add_option(option="Logout" ,command=self.from_logout_)
         self.dropdown2.add_option(option="Exit" , command= self.destroyy)
 
-  
+
 
     def Main_CV2(self):
-        self.bkAPPmain = ctk.CTkFrame(self, fg_color="#686363"  )
+        self.bkAPPmain = ctk.CTkFrame(self, fg_color="#3D2C48"  )
         self.bkAPPmain.pack(fill="both", expand=True)
         
     def My_cap1(self):
         self.Ar_cm1_box = ctk.CTkFrame(self.bkAPPmain , fg_color="#000000")
         self.Ar_cm1_box.place(relx=0.003, rely=0.0018, relwidth=0.6, relheight=0.490)
         
-        self.My_run_cam1_gui = ctk.CTkLabel(self.Ar_cm1_box ,text="")
+        self.My_run_cam1_gui = ctk.CTkLabel(self.Ar_cm1_box ,text=f"")
         self.My_run_cam1_gui.pack(expand=True, fill="both")
 
 
@@ -101,14 +131,14 @@ class APP_SY_Frame(ctk.CTkFrame):
         self.Ar_cm2_box = ctk.CTkFrame(self.bkAPPmain , fg_color="#000000")
         self.Ar_cm2_box.place(relx=0.003, rely=0.5, relwidth=0.6, relheight=0.490)
         
-        self.My_run_cam2_gui = ctk.CTkLabel(self.Ar_cm2_box ,text="")
+        self.My_run_cam2_gui = ctk.CTkLabel(self.Ar_cm2_box ,text=f"")
         self.My_run_cam2_gui.pack(expand=True, fill="both")
 
     def My_show_ui_My_cap1(self):
         self.Main_Text_My_cap1 = ctk.CTkFrame(self.bkAPPmain , fg_color="#2C2C2C" )
         self.Main_Text_My_cap1.place(relx=0.604, rely=0.001, relwidth=0.393, relheight=0.07)
         
-        self.TextMain_cap1 = ctk.CTkLabel(self.Main_Text_My_cap1 , text=f"กล้องหมายเลข 1")
+        self.TextMain_cap1 = ctk.CTkLabel(self.Main_Text_My_cap1 , text=f"กล้องหมายเลข 1" , font=("TH Sarabun New", 24)  )
         self.TextMain_cap1.pack(expand=True, fill="both")
  
         
@@ -130,11 +160,8 @@ class APP_SY_Frame(ctk.CTkFrame):
         self.Main_Text_My_cap2 = ctk.CTkFrame(self.bkAPPmain , fg_color="#2C2C2C" )
         self.Main_Text_My_cap2.place(relx=0.604, rely=0.5, relwidth=0.393, relheight=0.07)
         
-        self.TextMain_cap2 = ctk.CTkLabel(self.Main_Text_My_cap2, text=f"กล้องหมายเลข 2")
+        self.TextMain_cap2 = ctk.CTkLabel(self.Main_Text_My_cap2, text=f"กล้องหมายเลข 2" ,font=("TH Sarabun New", 24) )
         self.TextMain_cap2.pack(expand=True, fill="both")
-        
-        
-        
         
         self.Show_img_cap1()
         self.Show_img_cap2()
@@ -153,67 +180,78 @@ class APP_SY_Frame(ctk.CTkFrame):
         self.My_show_img2_cap2 = ctk.CTkLabel(self.box2_cap2, text="")
         self.My_show_img2_cap2.pack(expand=True, fill="both")
         
-        
-    def My_time_tz(self):
-        tz = pytz.timezone('Asia/Bangkok')
-        now = datetime.now(tz)
-        Time_Save_img = datetime.now(self.Tz).strftime("%H-%M-%S")
-        today = now.strftime("%d-%m-%Y")
-        year = now.year
-        month_str = now.strftime("%Y-%m")
-        hour = now.hour
-
-        if 6 <= hour <= 11:
-            period = "Morning"
-            self.period = "Morning"
-        elif 12 <= hour <= 15:
-            period = "Afternoon"
-            self.period = "Afternoon"
-        elif 16 <= hour <= 19:
-            period = "Evening"
-            self.period = "Evening"
-        else:
-            period = "Night"
-            self.period = "Night"
-
-        save_dir = f"Save_detection/{year}/{month_str}/{today}/{period}/{Time_Save_img}"
-        os.makedirs(save_dir, exist_ok=True)
-        return save_dir
-
-    @ThreadingLocked()   
     def Process_Cam01(self):
+        
         self.My_cap1()
+        self.model = YOLO("best2.pt").cuda()
+        self.cam01 = cv2.VideoCapture(
+            "rtsp://admin:Demaxzzo001@192.168.1.133:554/cam/realmonitor?channel=1&subtype=0"
+        )
+        
+
+        if not self.cam01.isOpened():
+            self.master_log_set.error(f"User: {self.user_email} Failed to open Camera 01.")
+            self.Check_Cam1_ = False
+            return
+        else:
+            self.master_log_set.info(f"User: {self.user_email} Camera 01 opened successfully.")
+            
         self.start_event.wait()
         self.running = True
         
-        self.im_SAVE_Id_model1_cm1 = set()
+
         self.im_save_CHECK_Id_model1_cm1 = set()
         
-        self.im_SAVE_Id_model2_cm1 = set()
-        self.im_save_CHECK_Id_model2_cm1 = set()
+
         
         self.id_Time_check_c1_m1 = {}
         self.id_Time_check_c1_m2 = {}
+        self.track_color = {}
+
         
-        while self.running and self.save_lock:
-            
+        self.crop_img_m1_m1_del = []
+        self.crop_img_m1_m2_del = []
+
+        
+        
+        os.makedirs("vidioodetect1", exist_ok=True)
+        fourcc = cv2.VideoWriter_fourcc(*'XVID')
+        frame_width = int(self.cam01.get(cv2.CAP_PROP_FRAME_WIDTH))
+        frame_height = int(self.cam01.get(cv2.CAP_PROP_FRAME_HEIGHT))
+        fps = int(self.cam01.get(cv2.CAP_PROP_FPS)) or 30
+        self.out2 = cv2.VideoWriter(f"vidioodetect1/output_detected_1.avi", fourcc, fps, (frame_width, frame_height))
+        self.master_log_set.info(f"User: {self.user_email} connect to Camera 1") 
+        while self.running:
+
             ret, frame = self.cam01.read()
-            if not ret:
-                CTkMessagebox(title="Error", message=f"ไม่สามารถรับเชื่อมต่อกล้อง01ได้ \n {ret}", icon="cancel")
             
+            if not ret or frame is None:
+                self.ERRORCAM_pp001 = "กล้องหมายเลข 1 ไม่ทำงาน กรุณาตรวจสอบการเชื่อมต่อ {ret}"
+                CTkMessagebox(title="Error", message=f"กล้องหมายเลข 1 ไม่ทำงาน กรุณาตรวจสอบการเชื่อมต่อ \n {ret}", icon="cancel")
+                self.Check_Cam1_ = False
+                self.master_log_set.error(f"User: {self.user_email} Failed to connect to Camera 1 {ret}")
+                continue
+            
+            self.out2.write(cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)) 
+            runYOLOm1 = self.model.track(frame, classes=[1], conf=0.5, persist=True, tracker="gui\\botsort.yaml",device=0 )
+            annotated_frame1 = runYOLOm1[0]
             frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             original_frame = frame.copy()
+            original_frame = cv2.cvtColor(original_frame, cv2.COLOR_BGR2RGB)
             cv2.line(frame, self.Line1[0], self.Line1[1], (255, 0, 255), 3)
             annotator = Annotator(frame)
             annotated_frame = annotator.result()
             
             
-            runYOLOm1 = self.model.track(frame, classes=[3], conf=0.7, persist=True)
-            annotated_frame1 = runYOLOm1[0]
-        
+            
+            
+            self.Tz = pytz.timezone('Asia/Bangkok')
+            self.Time_cm1_Model1 = datetime.now(self.Tz)
+            self.Main_Save_path(None, "Supper_check_c1", self.Time_cm1_Model1, None)
             if annotated_frame1.boxes is not None:
+                
                 current_time_ids = time.time()
-                current_frame_ids = set()  # ชุดสำหรับเก็บ ID ในเฟรมปัจจุบัน
+
                 for box in annotated_frame1.boxes:
                     class_if_model1 = int(box.cls.item())
                     Conf_if_model1 = box.conf.item()
@@ -221,37 +259,40 @@ class APP_SY_Frame(ctk.CTkFrame):
                     cx, cy, w, h = box.xywh[0].cpu().numpy().astype(int)
                     cv2.circle(frame, (cx, cy), 10, (5, 123, 255), -1)
                     
+                    
                     if box.id is not None:
                         track_id = int(box.id.item())
-                        current_frame_ids.add(track_id)  # เพิ่ม ID เข้าไปในชุดของเฟรมปัจจุบัน
+       
                         self.id_Time_check_c1_m1[track_id] = current_time_ids
-                 
-                        annotator.box_label(xyxy_if_model1, label=f"model1: {class_if_model1} -- {Conf_if_model1:.2f} -- {int(track_id)}")
-                  
+                        annotator.box_label(xyxy_if_model1, 
+                                            label=f"motorcycle_c1: CONF={Conf_if_model1:.2f} ID={int(track_id)}" , color=(51, 255, 51), txt_color=	(252, 109, 47) )
                         
-                        self.im_SAVE_Id_model1_cm1.add(track_id)
                         
-                        if self.im_SAVE_Id_model1_cm1 != self.im_save_CHECK_Id_model1_cm1 and self.is_Check_LINE1(cx, cy, self.Line1[0], self.Line1[1]):
-                            self.im_save_CHECK_Id_model1_cm1.update(self.im_SAVE_Id_model1_cm1)
-                            self.Tz = pytz.timezone('Asia/Bangkok')
-                            self.Time_cm1_Model1 = datetime.now(self.Tz)
-                            x1, y1, x2, y2 = map(int, xyxy_if_model1)
-             
-                            
-                            Crop_Img_c1_model_1 = original_frame[y1:y2, x1:x2]
+                        if (track_id not in self.im_save_CHECK_Id_model1_cm1) and self.is_Check_LINE1(cx, cy):
+                            self.im_save_CHECK_Id_model1_cm1.add(track_id)
+                            self.Time_cam1_oj = self.Time_cm1_Model1
+                            self.master_log_set.info(f"User: {self.user_email} Motorcycle detected on Camera 1 ID:{track_id} CONF: {Conf_if_model1:.2f}")
 
-                            print("💚")
-                            self.Main_Save_path(Crop_Img_c1_model_1, "CM1_Model1",self.Time_cm1_Model1)
-                            img = Image.fromarray(Crop_Img_c1_model_1)
+
+                            x1, y1, x2, y2 = map(int, xyxy_if_model1)
+
+                            self.Crop_Img_c1_model_1 = original_frame[y1:y2, x1:x2]
+                            
+    
+                            
+                            self.Crop_Img_c1_model_1_GUI = cv2.cvtColor(self.Crop_Img_c1_model_1, cv2.COLOR_BGR2RGB)
+                            img = Image.fromarray(self.Crop_Img_c1_model_1_GUI)
                             label_width = self.My_show_img1.winfo_width()
                             label_height = self.My_show_img1.winfo_height()
                             resizeimg = img.resize((label_width, label_height))
                             imgSHOWCtkm1_c1 = ctk.CTkImage(light_image=resizeimg, size=(label_width, label_height))
                             self.My_show_img1.configure(image=imgSHOWCtkm1_c1)
                             self.My_show_img1.image = imgSHOWCtkm1_c1
-                            # print(f">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>{Crop_Img_c1_model_1}<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
-                            if Crop_Img_c1_model_1.size >= 1:
-                                runYOLOm2 = self.model_page(Crop_Img_c1_model_1, classes=[0], conf = 0.5 )
+                            self.after(5000, self.clear_image_after_delay)
+
+                            if self.Crop_Img_c1_model_1.size >= 1:
+             
+                                runYOLOm2 = self.model.predict(original_frame, classes=[0], iou = 0.5)
                                 annotated_frame2 = runYOLOm2[0]
                                 
                                 if annotated_frame2.boxes is not None:
@@ -259,91 +300,106 @@ class APP_SY_Frame(ctk.CTkFrame):
                                         class_if_model2 = int(box.cls.item())
                                         conf_if_model2 = box.conf.item()
                                         xyxy_if_model2 = box.xyxy[0]
-                                            
                                         annotator.box_label(xyxy_if_model2 , label=f"model2 : {class_if_model2} -- {conf_if_model2:.2f}")
-                                        self.Tz = pytz.timezone('Asia/Bangkok')
-                                        self.Time_cm1_Model2 = datetime.now(self.Tz)
+                                        self.master_log_set.info(f"User: {self.user_email} License plate detected by Camera 1 CONF:{conf_if_model2:.2f}")
                                         x1 ,y1 , x2 ,y2 = map(int , xyxy_if_model2)
-                                        Crop_Img_c1_model_2 = Crop_Img_c1_model_1[y1:y2 , x1:x2]
-                                        self.Main_Save_path(Crop_Img_c1_model_2 , "CM1_Model2" , self.Time_cm1_Model2)
+                                        self.Crop_Img_c1_model_2 = original_frame[y1:y2 , x1:x2]
+
+                        
+                                        self.Main_Save_path(self.Crop_Img_c1_model_2 , "CM1_Model2" , self.Time_cam1_oj , track_id)
                                         
-                                        img = Image.fromarray(Crop_Img_c1_model_2)
+                                        self.Crop_Img_c1_model_2 = cv2.cvtColor(self.Crop_Img_c1_model_2, cv2.COLOR_BGR2RGB)
+                                        img = Image.fromarray(self.Crop_Img_c1_model_2)
                                         label_width = self.My_show_img2.winfo_width()
                                         label_height = self.My_show_img2.winfo_height()
                                         resizeimg = img.resize((label_width ,label_height))
                                         imgSHOWCtkm2_c1 = ctk.CTkImage(light_image= resizeimg , size= (label_width ,label_height ))
                                         self.My_show_img2.configure(image = imgSHOWCtkm2_c1)
                                         self.My_show_img2.image = imgSHOWCtkm2_c1
-                                            
-                                else:
-                                    pass
-                            else:
-                                pass
-                        else:
-                            pass
+                    
+                                        self.after(5000, self.clear_image_after_delay)
+                 
+                         
+                            self.Main_Save_path(self.Crop_Img_c1_model_1, "CM1_Model1",self.Time_cam1_oj , track_id) 
+
+                            self.Crop_Img_c1_model_2 = None
+                            self.Crop_Img_c1_model_1 = None        
 
 
-                missing_ids = self.im_SAVE_Id_model1_cm1 - current_frame_ids
-                for lost_id in missing_ids:
-                    if lost_id in self.id_Time_check_c1_m1:
-                        time_since_last_seen = current_time_ids - self.id_Time_check_c1_m1[lost_id]
-                        if time_since_last_seen > 10:
-                            self.im_save_CHECK_Id_model1_cm1.discard(lost_id) 
-                            self.im_SAVE_Id_model1_cm1.discard(lost_id)     
-                            del self.id_Time_check_c1_m1[lost_id]             
-                            # print(f"ตรวจสอบ ID {lost_id} | ล่าสุด: {self.id_Time_check_c1_m1[lost_id]} | ตอนนี้: {current_time_ids} | หายไปแล้ว {time_since_last_seen:.2f} วินาที")
-
-
-                
-                try: 
-                    img1 = Image.fromarray(annotated_frame)
+                try:
+                    # frame = cv2.resize(frame, (1152, 480)) 
+                    img1 = Image.fromarray(frame)
                     label_width = self.My_run_cam1_gui.winfo_width()
                     label_height = self.My_run_cam1_gui.winfo_height()
                     resiz_img = img1.resize((label_width, label_height))
-                    imgTK = ctk.CTkImage(light_image=resiz_img, size=(label_width, label_height))
+                    imgTK = ImageTk.PhotoImage(image=resiz_img)
                 
                     # อัปเดต GUI
                     self.My_run_cam1_gui.configure(image=imgTK)
                     self.My_run_cam1_gui.image = imgTK
-                    
-                    cv2.waitKey(1)
+                    # cv2.waitKey(1)
                 except:
                     pass
         
-                           
-    @ThreadingLocked()
-    def Process_Cam02(self):
+                time.sleep(0.01)
+
+
+    def Process_Cam02(self): 
         self.My_cap2()
+        self.model22 = YOLO("best.pt").cuda()
+        self.cam02 = cv2.VideoCapture(
+            "rtsp://admin:Demaxzzo001@192.168.1.134:554/cam/realmonitor?channel=1&subtype=0"
+        )
+        if not self.cam02.isOpened():
+            self.master_log_set.error(f"User: {self.user_email} Failed to open Camera 02.")
+            self.Check_Cam2_ = False
+            return
+        else:
+            self.master_log_set.info(f"User: {self.user_email} Camera 02 opened successfully.")
+            
+
         self.start_event.wait()
         self.running = True
-        
-        self.im_SAVE_Id_model1_cm2 = set()
         self.im_save_CHECK_Id_model1_cm2 = set()
-        
-        self.im_SAVE_Id_model2_cm2 = set()
-        self.im_save_CHECK_Id_model2_cm2 = set()
-        
+ 
         self.id_Time_check_c2_m1 = {}
         self.id_Time_check_c2_m2 = {}
+        self.track_color2 = {}
         
-        while self.running and self.save_lock2:
-            
+        os.makedirs("vidioodetect2", exist_ok=True)
+        fourcc = cv2.VideoWriter_fourcc(*'XVID')
+        frame_width = int(self.cam02.get(cv2.CAP_PROP_FRAME_WIDTH))
+        frame_height = int(self.cam02.get(cv2.CAP_PROP_FRAME_HEIGHT))
+        fps = int(self.cam02.get(cv2.CAP_PROP_FPS)) or 30
+        self.out2 = cv2.VideoWriter(f"vidioodetect2/output_detected_2.avi", fourcc, fps, (frame_width, frame_height))
+        
+        self.master_log_set.info(f"User: {self.user_email} connect to Camera 2")  
+        while self.running:
+ 
             ret, frame2 = self.cam02.read()
-            if not ret:
-                CTkMessagebox(title="Error", message=f"ไม่สามารถรับเชื่อมต่อกล้อง02ได้ \n {ret}", icon="cancel")
-            
+            if not ret or frame2 is None:
+                self.ERRORCAM_pp002 = "กล้องหมายเลข 2 ไม่ทำงาน กรุณาตรวจสอบการเชื่อมต่อ {ret}"
+                CTkMessagebox(title="Error", message=f"กล้องหมายเลข 2 ไม่ทำงาน กรุณาตรวจสอบการเชื่อมต่อ \n {ret}", icon="cancel")
+                self.Check_Cam2_ = False
+                self.master_log_set.error(f"User: {self.user_email} Failed to connect to Camera 2 {ret}")
+                continue
+            self.out2.write(cv2.cvtColor(frame2, cv2.COLOR_RGB2BGR)) 
+            runYOLOm1 = self.model22.track(frame2, classes=[1], conf=0.5, persist=True  , tracker="gui\\botsort.yaml" , device=0)
+            annotated_frame1 = runYOLOm1[0]
             frame2 = cv2.cvtColor(frame2, cv2.COLOR_BGR2RGB)
             original_frame = frame2.copy()
+            original_frame = cv2.cvtColor(original_frame, cv2.COLOR_BGR2RGB)
             cv2.line(frame2, self.Line2[0], self.Line2[1], (255, 0, 255), 3)
             annotator = Annotator(frame2)
             annotated_frame = annotator.result()
             
-            runYOLOm1 = self.model22.track(frame2, classes=[3], conf=0.7, persist=True)
-            annotated_frame1 = runYOLOm1[0]
             
+            self.Tz = pytz.timezone('Asia/Bangkok')
+            self.Time_cm2_Model1 = datetime.now(self.Tz)
+            self.Main_Save_path(None, "Supper_check_c2", self.Time_cm2_Model1, None)
             if annotated_frame1.boxes is not None:
                 current_time_ids = time.time()
-                current_frame_ids_C2_m1 = set()
+
                 for box in annotated_frame1.boxes:
                     class_if_model1 = int(box.cls.item())
                     Conf_if_model1 = box.conf.item()
@@ -353,34 +409,31 @@ class APP_SY_Frame(ctk.CTkFrame):
                     
                     if box.id is not None:
                         track_id = int(box.id.item())
-                        current_frame_ids_C2_m1.add(track_id)
+
                         self.id_Time_check_c2_m1[track_id] = current_time_ids
-                        
-                        annotator.box_label(xyxy_if_model1, label=f"model1: {class_if_model1} -- {Conf_if_model1:.2f} -- {int(track_id)}")
-                        
-                        self.im_SAVE_Id_model1_cm2.add(track_id)
-                        
-                        if self.im_SAVE_Id_model1_cm2 != self.im_save_CHECK_Id_model1_cm2 and self.is_Check_LINE2(cx, cy, self.Line2[0], self.Line2[1]):
-                            self.im_save_CHECK_Id_model1_cm2.update(self.im_SAVE_Id_model1_cm2)
-                            self.Tz = pytz.timezone('Asia/Bangkok')
-                            self.Time_cm2_Model1 = datetime.now(self.Tz)
+                        annotator.box_label(xyxy_if_model1, label=f"motorcycle_c2: CONF={Conf_if_model1:.2f} ID={int(track_id)}" , color=(51, 255, 51) , txt_color=	(252, 109, 47))
+                        print(f"🎀🪞🩰🦢🕯️:    {Conf_if_model1}")
+               
+                        if (track_id not in self.im_save_CHECK_Id_model1_cm2) and self.is_Check_LINE2(cx, cy):
+                            self.im_save_CHECK_Id_model1_cm2.add(track_id)
+                            self.Time_cam2_oj = self.Time_cm2_Model1
+                            self.master_log_set.info(f"User: {self.user_email} Motorcycle detected on Camera 2 ID:{track_id} CONF:{Conf_if_model1:.2f}")
                             x1, y1, x2, y2 = map(int, xyxy_if_model1)
-                            
-                            Crop_Img_c2_model_1 = original_frame[y1:y2, x1:x2]
-            
-                            print("🩷")
-                            self.Main_Save_path(Crop_Img_c2_model_1, "CM2_Model1", self.Time_cm2_Model1)
-                            
-                            img = Image.fromarray(Crop_Img_c2_model_1)
+                            self.Crop_Img_c2_model_1 = original_frame[y1:y2, x1:x2]
+                            self.Crop_Img_c2_model_1_show_GUI = cv2.cvtColor(self.Crop_Img_c2_model_1, cv2.COLOR_BGR2RGB)
+                            img = Image.fromarray(self.Crop_Img_c2_model_1_show_GUI)
                             label_width = self.My_show_img1_cap2.winfo_width()
                             label_height = self.My_show_img1_cap2.winfo_height()
                             resizeimg = img.resize((label_width, label_height))
                             imgSHOWCtkm1_c2 = ctk.CTkImage(light_image=resizeimg, size=(label_width, label_height))
                             self.My_show_img1_cap2.configure(image=imgSHOWCtkm1_c2)
                             self.My_show_img1_cap2.image = imgSHOWCtkm1_c2
+    
+
+                            self.after(5000, self.clear_image_after_delay)
+                            if self.Crop_Img_c2_model_1.size >= 1:
                             
-                            if Crop_Img_c2_model_1.size >= 1:
-                                runYOLOm2 = self.model_page22(Crop_Img_c2_model_1, classes=[0], conf=0.7)
+                                runYOLOm2 = self.model22.predict(original_frame, classes=[0])
                                 annotated_frame2 = runYOLOm2[0]
                                 
                                 if annotated_frame2.boxes is not None:
@@ -388,169 +441,392 @@ class APP_SY_Frame(ctk.CTkFrame):
                                         class_if_model2 = int(box.cls.item())
                                         conf_if_model2 = box.conf.item()
                                         xyxy_if_model2 = box.xyxy[0]
-                                        
-                                        annotator.box_label(xyxy_if_model2, label=f"model2: {class_if_model2} -- {conf_if_model2:.2f}")
+             
+                                        self.master_log_set.info(f"User: {self.user_email} License plate detected by Camera 2 CONF:{conf_if_model2:.2f}")
+                                        annotator.box_label(xyxy_if_model2, label=f"motorcycle_c2: {class_if_model2} -- {conf_if_model2:.2f}")
                                         self.Tz = pytz.timezone('Asia/Bangkok')
                                         self.Time_cm2_Model2 = datetime.now(self.Tz)
                                         x1, y1, x2, y2 = map(int, xyxy_if_model2)
-                                        Crop_Img_c2_model_2 = Crop_Img_c2_model_1[y1:y2, x1:x2]
-                                        self.Main_Save_path(Crop_Img_c2_model_2, "CM2_Model2", self.Time_cm2_Model2)
+                                        self.Crop_Img_c2_model_2 = original_frame[y1:y2, x1:x2]
                                         
-                                        img = Image.fromarray(Crop_Img_c2_model_2)
+            
+                                        
+                                        self.Main_Save_path(self.Crop_Img_c2_model_2 , "CM2_Model2", self.Time_cam2_oj, track_id)
+                                        self.Crop_Img_c2_model_2 = cv2.cvtColor(self.Crop_Img_c2_model_2, cv2.COLOR_BGR2RGB)
+                                        img = Image.fromarray(self.Crop_Img_c2_model_2)
                                         label_width = self.My_show_img2_cap2.winfo_width()
                                         label_height = self.My_show_img2_cap2.winfo_height()
                                         resizeimg = img.resize((label_width, label_height))
                                         imgSHOWCtkm2_c2 = ctk.CTkImage(light_image=resizeimg, size=(label_width, label_height))
                                         self.My_show_img2_cap2.configure(image=imgSHOWCtkm2_c2)
                                         self.My_show_img2_cap2.image = imgSHOWCtkm2_c2
-                                else:
-                                    pass
-                            else:
-                                pass
-                        else:
-                            pass
+
+                                        self.after(5000, self.clear_image_after_delay)
+                                        
+                            
+                            
+                            self.Main_Save_path(self.Crop_Img_c2_model_1, "CM2_Model1", self.Time_cam2_oj, track_id)                
+                                
+                            self.Crop_Img_c2_model_1 = None
+                            self.Crop_Img_c2_model_2 = None
                     
-                missing_ids = self.im_SAVE_Id_model1_cm2 - current_frame_ids_C2_m1
-                for lost_id in missing_ids:
-                    if lost_id in self.id_Time_check_c2_m1:
-                        time_since_last_seen = current_time_ids - self.id_Time_check_c2_m1[lost_id]
-                        if time_since_last_seen > 10:
-                            self.im_save_CHECK_Id_model1_cm2.discard(lost_id)
-                            self.im_SAVE_Id_model1_cm2.discard(lost_id)
-                            del self.id_Time_check_c2_m1[lost_id]
-                
+
+
                 try:
-                    img2 = Image.fromarray(annotated_frame)
+                    # frame2 = cv2.resize(frame2, (1152, 480)) 
+                    img2 = Image.fromarray(frame2)
                     label_width = self.My_run_cam2_gui.winfo_width()
                     label_height = self.My_run_cam2_gui.winfo_height()
                     resiz_img = img2.resize((label_width, label_height))
-                    imgTK2 = ctk.CTkImage(light_image=resiz_img, size=(label_width, label_height))
+                    imgTK2 = ImageTk.PhotoImage(image=resiz_img)
                     
                     self.My_run_cam2_gui.configure(image=imgTK2)
                     self.My_run_cam2_gui.image = imgTK2
-                    
-                    cv2.waitKey(1)
+
+                    # cv2.waitKey(1)
                 except:
                     pass
-                                        
-    def point_line_distance(self, cx, cy, line_start, line_end):
-        x0, y0 = cx, cy
-        x1, y1 = line_start
-        x2, y2 = line_end
+                time.sleep(0.01)
 
-        numerator = abs((y2 - y1)*x0 - (x2 - x1)*y0 + x2*y1 - y2*x1)
-        denominator = ((y2 - y1)**2 + (x2 - x1)**2)**0.5
-        distance = numerator / denominator
-        return distance
-    
-    
-                               
-    def is_Check_LINE1(self, cx, cy , line_start ,line_end , tolerance=10):
-        min_x ,max_x = min(line_start[0] , line_end[0]), max(line_start[0], line_end[0])
-        min_y, max_y = min(line_start[1], line_end[1]), max(line_start[1], line_end[1])
+    def clear_image_after_delay(self):
+        self.My_show_img1_cap2.configure(image="", text="")
+        self.My_show_img1_cap2.image = None
+        self.My_show_img1_cap2.update()
+        self.My_show_img1.configure(image="", text="")
+        self.My_show_img1.image = None
         
-        if not (min_x - tolerance <= cx <= max_x + tolerance and min_y - tolerance <= cy <= max_y + tolerance):
-            return False
 
-
-        distance = self.point_line_distance(cx, cy, line_start, line_end)
-
-        return distance <= tolerance
-    
-    def is_Check_LINE2(self, cx, cy , line_start ,line_end , tolerance=10):
-        min_x ,max_x = min(line_start[0] , line_end[0]), max(line_start[0], line_end[0])
-        min_y, max_y = min(line_start[1], line_end[1]), max(line_start[1], line_end[1])
+        self.My_show_img2_cap2.configure(image="", text="")
+        self.My_show_img2_cap2.image = None
+        self.My_show_img2_cap2.update()
+        self.My_show_img2.configure(image = "", text="")
+        self.My_show_img2.image = None
+        # ล้างภาพจาก CTkLabel
+        self.My_show_img1.configure(image="")
+        self.My_show_img1.image = None
+        # ล้างตัวแปรภาพ
+        self.imgSHOWCtkm1_c1 = None
+        self.imgSHOWCtkm1_c2 = None
         
-        if not (min_x - tolerance <= cx <= max_x + tolerance and min_y - tolerance <= cy <= max_y + tolerance):
-            return False
+        self.Crop_Img_c1_model_1 = None
 
 
-        distance = self.point_line_distance(cx, cy, line_start, line_end)
 
-        return distance <= tolerance
-
-
-    def Main_Save_path(self, frame, ID_camala, timestamp):
-        path = self.My_time_tz()
-        unique_id = uuid.uuid4().hex[:6]
-        # บันทึกข้อมูลลงลิสต์
-        if ID_camala == "CM1_Model1":
-            self.Time_CM1_MO1 = timestamp.strftime('%Y-%m-%d %H:%M:%S')
-            self.CM1_Model1 = frame
-            self.CM1_Model1_list.append({
-                'image': self.CM1_Model1,
-                'timestamp': self.Time_CM1_MO1
-            })
-
-        if ID_camala == "CM2_Model1":
-            self.Time_CM2_MO1 = timestamp.strftime('%Y-%m-%d %H:%M:%S')
-            self.CM2_Model1 = frame
-            self.CM2_Model1_list.append({
-                'image': self.CM2_Model1,
-                'timestamp': self.Time_CM2_MO1
-            })
-
-        if ID_camala == "CM1_Model2":
-            self.Time_CM1_MO2 = timestamp.strftime('%Y-%m-%d %H:%M:%S')
-            self.CM1_Model2 = frame
-            self.CM1_Model2_list.append({
-                'image': self.CM1_Model2,
-                'timestamp': self.Time_CM1_MO2
-            })
-
-        if ID_camala == "CM2_Model2":
-            self.Time_CM2_MO2 = timestamp.strftime('%Y-%m-%d %H:%M:%S')
-            self.CM2_Model2 = frame
-            self.CM2_Model2_list.append({
-                'image': self.CM2_Model2,
-                'timestamp': self.Time_CM2_MO2
-            })
-
-        # ตรวจสอบเวลาและบันทึก
-        if self.Time_CM1_MO1 and self.Time_CM2_MO1:
-            time1 = datetime.strptime(self.Time_CM1_MO1, '%Y-%m-%d %H:%M:%S')
-            time2 = datetime.strptime(self.Time_CM2_MO1, '%Y-%m-%d %H:%M:%S')
-
-            if abs(time1 - time2) <= timedelta(seconds=1):
-                dateSQL = time1.strftime('%Y-%m-%d')
-                timeSQL = time1.strftime('%H:%M:%S')
-
-                for i, item in enumerate(self.CM1_Model1_list):
-                    C1_M1_Path_SQL = f"{path}/_C1_Model1_{i}_{unique_id}.jpg"
-                    if cv2.imwrite(C1_M1_Path_SQL, item['image']):
-                        self.CM1_M1_M2_Path.append(C1_M1_Path_SQL)
-                        print(f"Saved C1_Model1_{i}.jpg")
-
-                for i, item in enumerate(self.CM2_Model1_list):
-                    C2_M1_Path_SQL = f"{path}/_C2_Model1_{i}_{unique_id}.jpg"
-                    if cv2.imwrite(C2_M1_Path_SQL, item['image']):
-                        self.CM2_M1_M2_Path.append(C2_M1_Path_SQL)
-                        print(f"Saved C2_Model1_{i}.jpg")
-
-
-                for i, item in enumerate(self.CM1_Model2_list):
-                    C1_M2_Path_SQL = f"{path}/_C_one_Model2_{i}_{unique_id}.jpg"
-                    if cv2.imwrite(C1_M2_Path_SQL, item['image']):
-                        self.CM1_M1_M2_Path.append(C1_M2_Path_SQL)
-                        print(f"Saved C1_Model2_{i}.jpg")
-
-                for i, item in enumerate(self.CM2_Model2_list):
-                    C2_M2_Path_SQL = f"{path}/_C_two_Model2_{i}_{unique_id}.jpg"
-                    if cv2.imwrite(C2_M2_Path_SQL, item['image']):
-                        self.CM2_M1_M2_Path.append(C2_M2_Path_SQL)
-                        print(f"Saved C2_Model2_{i}_{unique_id}.jpg")
-
-
-                    
-                insert(self.period, dateSQL, timeSQL, self.CM1_M1_M2_Path, self.CM2_M1_M2_Path)
-                self.Notification_windown()
-                    
-            # ล้างลิสต์
-            self.CM1_Model1_list = []
-            self.CM2_Model1_list = []
-            self.CM1_Model2_list = []
-            self.CM2_Model2_list = []
     
+    def is_Check_LINE1(self, cx, cy):
+        x1, y1 = self.Line1[0]
+        x2, y2 = self.Line1[1]
+
+        A = x2 - x1 
+        B = y2 - y1
+        C = A**2 + B**2
+        C_root = math.sqrt(C)
+        numerator = abs(A * (cy - y1) - B * (cx - x1))
+        distance = numerator / C_root
+        threshold = 35
+        if distance <= threshold:
+            return True
+        else:
+            return False
+            
+    def is_Check_LINE2(self, cx, cy):
+        x1, y1 = self.Line2[0]
+        x2, y2 = self.Line2[1]
+
+        A = x2 - x1 
+        B = y2 - y1
+        C = A**2 + B**2
+        C_root = math.sqrt(C)
+        numerator = abs(A * (cy - y1) - B * (cx - x1))
+        distance = numerator / C_root
+        threshold = 35
+        if distance <= threshold:
+            return True
+        else:
+            return False
+    
+
+    def show_loading_popup(self):
+        CTkMessagebox(title="Info", message="กำลังโหลดข้อมูลกล้อง กรุณารอสักครู่",icon="check")
+
+
+    def Main_Save_path(self, frame, ID_camala, timestamp, track_id):
+        with self.save_lock:
+            re_list_index_cm1_model1 = []
+            re_list_index_cm2_model1 = []
+            re_list_index_model2_c1 = []
+            re_list_index_model2_c2 = []
+            re_supprt_index1 = []
+            re_supprt_index2 = []
+            re_supprt_index1_model2 = []
+            re_supprt_index2_model2 = []
+
+            is_saved = False # ตัวแปรควบคุมการทำงาน
+
+            tz = pytz.timezone('Asia/Bangkok')
+            now = datetime.now(tz)
+            today = now.strftime("%d-%m-%Y")
+            year = now.year
+            month_str = now.strftime("%Y-%m")
+            hour = now.hour
+
+            if 6 <= hour <= 11:
+                period = "Morning"
+                self.period = "Morning"
+            elif 12 <= hour <= 15:
+                period = "Afternoon"
+                self.period = "Afternoon"
+            elif 16 <= hour <= 19:
+                period = "Evening"
+                self.period = "Evening"
+            else:
+                period = "Night"
+                self.period = "Night"
+
+            save_dir = f"Save_detection/{year}/{month_str}/{today}/{period}"
+            os.makedirs(save_dir, exist_ok=True)
+
+            if ID_camala == "CM1_Model1":
+                self.Time_CM1_MO1 = timestamp.strftime('%Y-%m-%d %H:%M:%S')
+                self.CM1_Model1 = frame
+                self.Track_idC1M1 = track_id
+                self.CM1_Model1_list.append({
+                    'image': self.CM1_Model1,
+                    'timestamp': self.Time_CM1_MO1,
+                    'inx': self.Track_idC1M1
+                })
+
+            if ID_camala == "CM2_Model1":
+                self.Time_CM2_MO1 = timestamp.strftime('%Y-%m-%d %H:%M:%S')
+                self.CM2_Model1 = frame
+                self.Track_idC2M1 = track_id
+                self.CM2_Model1_list.append({
+                    'image': self.CM2_Model1,
+                    'timestamp': self.Time_CM2_MO1,
+                    'inx': self.Track_idC2M1
+                })
+
+            if ID_camala == "CM1_Model2":
+                self.Time_CM1_MO2 = timestamp.strftime('%Y-%m-%d %H:%M:%S')
+                self.CM1_Model2 = frame
+                self.Track_idC1M2 = track_id
+                self.CM1_Model2_list.append({
+                    'image': self.CM1_Model2,
+                    'timestamp': self.Time_CM1_MO2,
+                    'inx': self.Track_idC1M2
+                })
+
+            if ID_camala == "CM2_Model2":
+                self.Time_CM2_MO2 = timestamp.strftime('%Y-%m-%d %H:%M:%S')
+                self.CM2_Model2 = frame
+                self.Track_idC2M2 = track_id
+                self.CM2_Model2_list.append({
+                    'image': self.CM2_Model2,
+                    'timestamp': self.Time_CM2_MO2,
+                    'inx': self.Track_idC2M2
+                })
+
+            if ID_camala == "Supper_check_c1":
+                self.Supper_check_c1 = timestamp.strftime('%Y-%m-%d %H:%M:%S')
+                self.Supper_check_c1_List = [{
+                    'timestamp': self.Supper_check_c1,
+                }]
+
+            if ID_camala == "Supper_check_c2":
+                self.Supper_check_c2 = timestamp.strftime('%Y-%m-%d %H:%M:%S')
+                self.Supper_check_c2_List = [{
+                    'timestamp': self.Supper_check_c2,
+                }]
+
+            # ส่วนที่ 1: ตรวจจับ Matched detection จากทั้ง 2 กล้อง
+            if self.CM1_Model1_list and self.CM2_Model1_list:
+                for i, (item1, item2) in enumerate(zip(self.CM1_Model1_list, self.CM2_Model1_list)):
+                    time_str1 = item1['timestamp']
+                    time_str2 = item2['timestamp']
+                    idx_ID1 = item1['inx']
+                    idx_ID2 = item2['inx']
+
+                    time_obj1 = datetime.strptime(time_str1, '%Y-%m-%d %H:%M:%S')
+                    time_obj2 = datetime.strptime(time_str2, '%Y-%m-%d %H:%M:%S')
+
+                    time_diff = abs((time_obj1 - time_obj2).total_seconds())
+
+                    if time_diff <= 4:
+                        self.master_log_set.info(f"User: {self.user_email} Matched detection from Camera 1 and Camera 2")
+
+                        if time_obj1 < time_obj2:
+                            time_to_use = time_obj1
+                        else:
+                            time_to_use = time_obj2
+
+                        dateSQL = time_to_use.strftime('%Y-%m-%d')
+                        timeSQL = time_to_use.strftime('%H:%M:%S')
+                        timePATH = time_to_use.strftime('%H-%M-%S')
+                        full_save_dir = f"{save_dir}/{timePATH}"
+                        os.makedirs(full_save_dir, exist_ok=True)
+
+                        for i_cm1, item in enumerate(self.CM1_Model1_list):
+                            C1_M1_Path_SQL = f"{full_save_dir}/_C1_Model1_{i_cm1}.png"
+                            if cv2.imwrite(C1_M1_Path_SQL, item['image']):
+                                self.CM1_M1_M2_Path.add(C1_M1_Path_SQL)
+                                self.master_log_set.info(f"User: {self.user_email} Save C1_Model1_{i_cm1}.png from Matched detection from Camera 1 and Camera 2")
+                                print(f"บันทึก C1_Model1_{i_cm1}.png")
+                            re_list_index_cm1_model1.append(i_cm1)
+
+                        for i_cm2, item in enumerate(self.CM2_Model1_list):
+                            C2_M1_Path_SQL = f"{full_save_dir}/_C2_Model1_{i_cm2}.png"
+                            if cv2.imwrite(C2_M1_Path_SQL, item['image']):
+                                self.CM2_M1_M2_Path.add(C2_M1_Path_SQL)
+                                self.master_log_set.info(f"User: {self.user_email} Save C2_Model1_{i_cm2}.png from Matched detection from Camera 1 and Camera 2")
+                                print(f"บันทึก C2_Model1_{i_cm2}.png")
+                            re_list_index_cm2_model1.append(i_cm2)
+
+                        for i_m2c1, item in enumerate(self.CM1_Model2_list):
+                            if item['inx'] == idx_ID1:
+                                C1_M2_Path_SQL = f"{full_save_dir}/_C_one_Model2_{i_m2c1}.png"
+                                if cv2.imwrite(C1_M2_Path_SQL, item['image']):
+                                    self.CM1_M1_M2_Path.add(C1_M2_Path_SQL)
+                                    self.master_log_set.info(f"User: {self.user_email} Save C1_Model2_{i_m2c1}.png from Matched detection from Camera 1 and Camera 2")
+                                    print(f"บันทึก C1_Model2_{i_m2c1}.png")
+                                re_list_index_model2_c1.append(i_m2c1)
+
+                        for i_m2c2, item in enumerate(self.CM2_Model2_list):
+                            if item['inx'] == idx_ID2:
+                                C2_M2_Path_SQL = f"{full_save_dir}/_C_two_Model2_{i_m2c2}.png"
+                                if cv2.imwrite(C2_M2_Path_SQL, item['image']):
+                                    self.CM2_M1_M2_Path.add(C2_M2_Path_SQL)
+                                    self.master_log_set.info(f"User: {self.user_email} Save C2_Model2_{i_m2c2}.png from Matched detection from Camera 1 and Camera 2")
+                                    print(f"บันทึก C2_Model2_{i_m2c2}.png")
+                                re_list_index_model2_c2.append(i_m2c2)
+
+                        if self.CM1_M1_M2_Path and self.CM2_M1_M2_Path:
+                            cm1_out = sorted(map(str, self.CM1_M1_M2_Path))
+                            cm2_out = sorted(map(str, self.CM2_M1_M2_Path))
+                            self.db.insert(self.period, dateSQL, timeSQL, cm1_out, cm2_out)
+                            self.Notification_windown()
+
+                            for i in reversed(re_list_index_cm1_model1):
+                                if i < len(self.CM1_Model1_list):
+                                    del self.CM1_Model1_list[i]
+                            for i in reversed(re_list_index_cm2_model1):
+                                if i < len(self.CM2_Model1_list):
+                                    del self.CM2_Model1_list[i]
+                            for i in reversed(re_list_index_model2_c1):
+                                if i < len(self.CM1_Model2_list):
+                                    del self.CM1_Model2_list[i]
+                            for i in reversed(re_list_index_model2_c2):
+                                if i < len(self.CM2_Model2_list):
+                                    del self.CM2_Model2_list[i]
+
+                            self.master_log_set.info(f"User: {self.user_email} Matched detection from Camera 1 and Camera 2. Data saved successfully")
+                            self.CM1_M1_M2_Path.clear()
+                            self.CM2_M1_M2_Path.clear()
+                            self.CM1_Model1 = None
+                            self.CM2_Model1 = None
+                            self.CM1_Model2 = None
+                            self.CM2_Model2 = None
+                            is_saved = True # ตั้งค่าตัวแปรควบคุมเป็น True
+                            return # ออกจากฟังก์ชันทันทีหลังจากบันทึกเสร็จ
+
+            # ส่วนที่ 2: ตรวจจับ Matched detection จากกล้อง 1 เท่านั้น
+            if not is_saved and self.CM1_Model1_list and not self.CM2_Model1_list:
+                for i, item1 in enumerate(self.CM1_Model1_list):
+                    re_supprt_index1.append(i)
+                    idx_ID1 = item1['inx']
+                    timeput = item1['timestamp']
+                    Time_only_Cam1 = tz.localize(datetime.strptime(timeput, "%Y-%m-%d %H:%M:%S"))
+
+                    # ตรวจสอบกับ Supper_check_c2_List ว่ามีข้อมูลเข้ามาหรือไม่
+                    if not self.Supper_check_c2_List or abs((tz.localize(datetime.strptime(self.Supper_check_c2_List[0]['timestamp'], "%Y-%m-%d %H:%M:%S")) - Time_only_Cam1).total_seconds()) > 4:
+                        self.master_log_set.info("Matched detection from Camera 1 only.")
+                        print("บันทึกข้อมูลกล้อง 1 อิสระ")
+                        timePATH = Time_only_Cam1.strftime('%H-%M-%S')
+                        dateSQL = Time_only_Cam1.strftime('%Y-%m-%d')
+                        timeSQL = Time_only_Cam1.strftime('%H:%M:%S')
+                        full_save_dir = f"{save_dir}/{timePATH}"
+                        os.makedirs(full_save_dir, exist_ok=True)
+
+                        C1_M1_Path_SQL = f"{full_save_dir}/_C1_Model1_{i}.png"
+                        if cv2.imwrite(C1_M1_Path_SQL, item1['image']):
+                            self.CM1_M1_M2_Path_the_one.add(C1_M1_Path_SQL)
+                            self.master_log_set.info(f"User: {self.user_email} Save C1_Model1_{i}.png from Matched detection from Camera 1 ")
+                            print(f"บันทึก C1_Model1_{i}.png")
+
+                        for j, item in enumerate(self.CM1_Model2_list):
+                            if item['inx'] == idx_ID1:
+                                C1_M2_Path_SQL = f"{full_save_dir}/_C_one_Model2_{j}.png"
+                                if cv2.imwrite(C1_M2_Path_SQL, item['image']):
+                                    self.CM1_M1_M2_Path_the_one.add(C1_M2_Path_SQL)
+                                    self.master_log_set.info(f"User: {self.user_email} Save C1_Model2_{i}.png from Matched detection from Camera 1 ")
+                                    print(f"บันทึก C1_Model2_{j}.png")
+                                re_supprt_index1_model2.append(j)
+
+                        self.master_log_set.info(f"User: {self.user_email} detection from Camera 1 only. Data saved successfully")
+                        cm1_out = sorted(map(str, self.CM1_M1_M2_Path_the_one))
+                        self.db.insert(self.period, dateSQL, timeSQL, cm1_out, None)
+                        self.Notification_windown()
+                        self.CM1_M1_M2_Path_the_one.clear()
+
+                        if self.CM1_Model1_list:
+                            for i in reversed(re_supprt_index1):
+                                if i < len(self.CM1_Model1_list):
+                                    del self.CM1_Model1_list[i]
+                        if self.CM1_Model2_list:
+                            for i in reversed(re_supprt_index1_model2):
+                                if i < len(self.CM1_Model2_list):
+                                    del self.CM1_Model2_list[i]
+                        is_saved = True # ตั้งค่าเป็น True เพื่อไม่ให้ทำงานในบล็อกถัดไป
+                        return # ออกจากฟังก์ชันทันที
+
+            # ส่วนที่ 3: ตรวจจับ Matched detection จากกล้อง 2 เท่านั้น
+            if not is_saved and self.CM2_Model1_list and not self.CM1_Model1_list:
+                for i, item1 in enumerate(self.CM2_Model1_list):
+                    re_supprt_index2.append(i)
+                    idx_ID2 = item1['inx']
+                    timeput = item1['timestamp']
+                    Time_only_Cam2 = tz.localize(datetime.strptime(timeput, "%Y-%m-%d %H:%M:%S"))
+
+                    if not self.Supper_check_c1_List or abs((tz.localize(datetime.strptime(self.Supper_check_c1_List[0]['timestamp'], "%Y-%m-%d %H:%M:%S")) - Time_only_Cam2).total_seconds()) > 4:
+                        self.master_log_set.info(f"User: {self.user_email} Matched detection from Camera 2 only.")
+                        timePATH = Time_only_Cam2.strftime('%H-%M-%S')
+                        dateSQL = Time_only_Cam2.strftime('%Y-%m-%d')
+                        timeSQL = Time_only_Cam2.strftime('%H:%M:%S')
+                        full_save_dir = f"{save_dir}/{timePATH}"
+                        os.makedirs(full_save_dir, exist_ok=True)
+
+                        C2_M1_Path_SQL = f"{full_save_dir}/_C2_Model1_{i}.png"
+                        if cv2.imwrite(C2_M1_Path_SQL, item1['image']):
+                            self.CM2_M1_M2_Path_the_one.add(C2_M1_Path_SQL)
+                            self.master_log_set.info(f"User: {self.user_email} Save C2_Model1_{i}.png from Matched detection from Camera 2")
+                            print(f"บันทึก C2_Model1_{i}.png")
+
+                        for j, item in enumerate(self.CM2_Model2_list):
+                            if item['inx'] == idx_ID2:
+                                C2_M2_Path_SQL = f"{full_save_dir}/_C_two_Model2_{j}.png"
+                                if cv2.imwrite(C2_M2_Path_SQL, item['image']):
+                                    self.CM2_M1_M2_Path_the_one.add(C2_M2_Path_SQL)
+                                    self.master_log_set.info(f"User: {self.user_email} Save C2_Model2_{i}.png from Matched detection from Camera 2")
+                                    print(f"บันทึก C2_Model2_{j}.png")
+                                re_supprt_index2_model2.append(j)
+
+                        self.master_log_set.info(f"User: {self.user_email} detection from Camera 2 only. Data saved successfully")
+                        cm2_out = sorted(map(str, self.CM2_M1_M2_Path_the_one))
+                        self.db.insert(self.period, dateSQL, timeSQL, None, cm2_out)
+                        self.Notification_windown()
+                        self.CM2_M1_M2_Path_the_one.clear()
+                        self.Time_cam2_oj = None
+
+                        if self.CM2_Model1_list:
+                            for i in reversed(re_supprt_index2):
+                                if i < len(self.CM2_Model1_list):
+                                    del self.CM2_Model1_list[i]
+                        if self.CM2_Model2_list:
+                            for i in reversed(re_supprt_index2_model2):
+                                if i < len(self.CM2_Model2_list):
+                                    del self.CM2_Model2_list[i]
+                        is_saved = True # ตั้งค่าเป็น True เพื่อไม่ให้ทำงานในบล็อกถัดไป
+                        return # ออกจากฟังก์ชันทันที
+                    
     def start_cam(self):
         self.start_event = threading.Event()
         threading.Thread(target= self.Process_Cam01 , daemon=True).start()
@@ -562,31 +838,28 @@ class APP_SY_Frame(ctk.CTkFrame):
         msg = CTkMessagebox(title="ยืนยันการออก", message="คุณแน่ใจว่าต้องการออกจากโปรแกรม?", 
                             icon="question", option_1="ยกเลิก", option_2="ตกลง")
         if msg.get() == "ตกลง":
-
+            self.master.Login_response.logout()
             self.running = False
-            self.cam01.release()
-            self.cam02.release()
             cv2.destroyAllWindows()
             self.quit()
             sys.exit()
     
     def from_logout_(self):
+        msg = CTkMessagebox(
+            title="ยืนยันการออก", 
+            message="คุณแน่ใจว่าต้องการออกจากระบบ?", 
+            icon="question", 
+            option_1="ยกเลิก", 
+            option_2="ตกลง"
+        )
         
-        msg = CTkMessagebox(title="ยืนยันการออก", message="คุณแน่ใจว่าต้องการออกจากระบบ?", 
-                            icon="question", option_1="ยกเลิก", option_2="ตกลง")
         if msg.get() == "ตกลง":
-            try:
-                self.cam01.release()
-                self.cam02.release()
-                self.after(100 , self.quit)
-                cv2.destroyAllWindows()
-                self.master.LoginFFrame = LoginFrame(self.master) 
-                self.master.LoginFFrame.pack(fill="both", expand=True)
-            except:
-                pass
+            self.master.Login_response.logout()
 
-    
-
+            # ทำลายหน้า Main app แล้วกลับไป Login
+            self.destroy()
+            self.master.LoginFFrame = LoginFrame(self.master)
+            self.master.LoginFFrame.pack(fill="both", expand=True)
 
     def Notification_windown(self):
         def on_click():
@@ -595,6 +868,19 @@ class APP_SY_Frame(ctk.CTkFrame):
         toaster = ToastNotifier()
         toaster.show_toast(
             "ตรวจพบการระเมิดรถจักยานยนต์บนทางเท้า",
+            "คลิกเพื่อตรวจสอบ",
+            duration=10,
+            threaded=True,
+            callback_on_click=on_click
+        )
+        
+    def Notification_windown_Counter(self):
+        def on_click():
+            webbrowser.open("http://localhost:8000/dachvoth")
+
+        toaster = ToastNotifier()
+        toaster.show_toast(
+            "ตรวจพบการระเมิดรถจักยานยนต์บนทางเท้า\nและการขับรถย้อนศร",
             "คลิกเพื่อตรวจสอบ",
             duration=10,
             threaded=True,
@@ -609,6 +895,10 @@ class LoginFrame(ctk.CTkFrame):
         self.master = master
         self.bind("<Configure>", self.Show_img_BkMain)
         self.Bk_laout_1()
+        self.path_jsov_email = "gui\\saved_email.json"
+        self.Email_save = self.Load_Email()
+        
+        
     def Show_img_BkMain(self, event=None):
         self.width = self.winfo_width()
         self.height = self.winfo_height()
@@ -625,7 +915,8 @@ class LoginFrame(ctk.CTkFrame):
     def Bk_laout_1(self):
         self.bkmain1 = ctk.CTkFrame(self, fg_color="#333333")
         self.bkmain1.place(relx=0.5, rely=0.5, relwidth=0.9, relheight=0.85, anchor="center")
-
+        self.width = self.winfo_width()
+        self.height = self.winfo_height()
         self.bkmain2 = ctk.CTkFrame(self.bkmain1, fg_color="#040404")
         self.bkmain2.place(relx=0, rely=0, relwidth=0.5, relheight=1)
 
@@ -634,13 +925,15 @@ class LoginFrame(ctk.CTkFrame):
 
 
         self.img_let1 = Image.open("gui\\img2.png")
-        self.im_show_img_let1 = ctk.CTkLabel(self.bkmain2, text="")
+        resized = self.img_let1.resize((self.width, self.height))
+        self.Show_img_let1 = ctk.CTkImage(light_image=resized, size=(self.width, self.height))
+        self.im_show_img_let1 = ctk.CTkLabel(self.bkmain2, text="", image=self.Show_img_let1 )
         self.im_show_img_let1.place(relx=0, rely=0, relwidth=1, relheight=1)
         self.bkmain2.bind("<Configure>", self.resize_img_in_bkmain2)
         self.bkmain_input.bind("<Configure>" , self.In_Put_index)
 
     def resize_img_in_bkmain2(self, event):
-        print(f"Event widget: {event.widget}, Width: {event.width}, Height: {event.height}")
+        # print(f"Event widget: {event.widget}, Width: {event.width}, Height: {event.height}")
         width = event.width
         height = event.height
         resized_img = self.img_let1.resize((width, height))
@@ -650,7 +943,7 @@ class LoginFrame(ctk.CTkFrame):
 
 
     def In_Put_index(self, event=None):
-        print(f"Event widget: {event.widget}, Width: {event.width}, Height: {event.height}xxxxxxxxxxx")
+   
         if len(self.bkmain_input.winfo_children()) > 0:
             return  
         parent_width = self.bkmain_input.winfo_width() 
@@ -670,39 +963,134 @@ class LoginFrame(ctk.CTkFrame):
 
         self.entry_password = ctk.CTkEntry(self.frame_login_back, placeholder_text="Password...", width=parent_width, height=parent_height, show="*")
         self.entry_password.pack(pady=10)
+        
+        self.row_frame = ctk.CTkFrame(self.frame_login_back, fg_color="transparent")
+        self.row_frame.pack(pady=15)
 
-        self.button_login = ctk.CTkButton(self.frame_login_back, text="Login", command=self.master.Go_main_App_Sy)
+        if self.Email_save:
+            self.entry_email.insert(0, self.Email_save)
+        # Checkbox
+        self.Check_Bbox_email = ctk.CTkCheckBox(
+            self.row_frame,
+            text="Remember email.",
+            checkbox_width=15,
+            checkbox_height=15,
+            
+  
 
+        )
+        self.Check_Bbox_email.select()
+        self.Check_Bbox_email.pack(side="left")  
 
-        self.button_login.pack(pady=20)
+        # ปุ่ม Forgot password
+        self.button_Forgot = ctk.CTkButton(
+            self.row_frame,
+            text="Forgot password.",
+            hover_color="#F54927", command= lambda: webbrowser.open("http://localhost:5173/"),
+            fg_color="transparent", 
+        )
+        self.button_Forgot.pack(side="left", padx=3)
+        
+         # ปุ่ม Forgot password
+        self.button_Forgot = ctk.CTkButton(
+            self.row_frame,
+            text="Register.",
+            hover_color="#156A0F"
+            , command= lambda: webbrowser.open("http://localhost:5173/"),
+            fg_color="transparent", 
+            
+        )
+        self.button_Forgot.pack(side="left" , padx=3)
+
+        
+        self.button_login = ctk.CTkButton(self.frame_login_back, text="Login", command=self.Check_Login)
+        self.button_login.pack(pady=15)
     
-    
+    def User_email_save(self):
+        if self.Check_Bbox_email.get():
+            Email = self.entry_email.get()
+            if Email:
+                with open(self.path_jsov_email, "w") as f:
+                    json.dump({"email": Email}, f)
+    def Load_Email(self):
+        if os.path.exists(self.path_jsov_email):
+            try:
+                with open(self.path_jsov_email, "r") as e:
+                    data = json.load(e)
+                    return data.get("email", "")
+            except json.JSONDecodeError:
+                # ลบหรือเขียนใหม่ถ้าข้อมูลเสีย
+                with open(self.path_jsov_email, "w") as f:
+                    json.dump({}, f)
+                return ""
+        return ""
+
     def Check_Login(self):
         email = self.entry_email.get()
         password = self.entry_password.get()
-        login_data(email, password)
+        email_regex = r"^[\w\.-]+@[\w\.-]+\.\w+$"
         
-        if login_data == True:
+        check_email =  re.match(email_regex , email)
+        if not check_email:
+            CTkMessagebox(title="รูปแบบอีเมลไม่ถูกต้อง", message="กรุณากรอกรูปแบบอีเมลที่ถูกต้อง")
+            return 
+        if email == "" or password == "":
+            CTkMessagebox(
+                title="กรุณากรอกข้อมูลให้ครบ",
+                message="กรุณากรอกอีเมลและรหัสผ่าน",
+                icon="warning",
+                option_1="ตกลง"
+            )
+            self.master.MasterLog_app.warning("User login attempt failed: email or password is empty.")
+            return
+        response = self.master.Login_response.Loginpy_def(email, password)
+        if response:
+            self.master.MasterLog_app.info(f"Login successful for user: {email}")
+            self.master.user_info = {
+                "id": response["user"]["id"],
+                # "email": response["user"]["email"],
+                # "type": response["user"]["userType"]
+            }
+            print("UserDetails Login:", response)
+            if self.Check_Bbox_email.get():
+                self.User_email_save()
+
+            else:
+                if os.path.exists(self.path_jsov_email):
+                    os.remove(self.path_jsov_email)
             self.master.Go_main_App_Sy()
-        
+        else:
+            self.master.MasterLog_app.info(f"Login failed for user: {email}")
+            CTkMessagebox(title="เข้าสู่ระบบล้มเหลว", message="อีเมลหรือรหัสผ่านไม่ถูกต้อง", icon="cancel")
 
-
-
+    
 class App(ctk.CTk):
     def __init__(self):
         super().__init__()
-        self.title("โปรแกรมตรวจจับมอไซบนทางเท้า")
+        ctk.deactivate_automatic_dpi_awareness()
+        ctk.set_window_scaling(1.0)
+        ctk.set_widget_scaling(1.0)
+        
+        
+        
+        self.MasterLog_app = MasterLog()
+        self.Login_response = Loginpy()
+        self.MasterLog_app.info("Application started")
+        self.title("โปรแกรมตรวจจับรถจักรยานยนต์บนทางเท้า")
+        self.iconbitmap("gui\\bkmain1.ico")
         self.LoginFFrame = LoginFrame(self)
         self.LoginFFrame.pack(fill="both", expand=True)
         width = self.winfo_screenwidth() 
         height = self.winfo_screenheight()
         self.resizable(True, True)  # เปลี่ยนเป็น True เพื่อให้ยืดหยุ่น
+        self.minsize(800, 600)
         self.geometry(f"1000x700")  # ขนาดเริ่มต้น
         self.screen_app_width = self.winfo_screenwidth()
         self.after(1000, lambda: self.state('zoomed'))
         self.protocol("WM_DELETE_WINDOW", self.surs)
-
-
+        self.user_info = {}
+        
+    
     def Go_main_App_Sy(self):
         self.LoginFFrame.destroy()
         self.main_app_frame = APP_SY_Frame(self)
@@ -714,10 +1102,14 @@ class App(ctk.CTk):
                             icon="warning", option_1="ยกเลิก", option_2="ตกลง")
         
         if msg.get() == "ตกลง":
+            self.MasterLog_app.info(f"User Out program.")
+            self.Login_response.logout()
             self.quit()
             
             
         
 if __name__ == "__main__":
+    
     app = App()
     app.mainloop()
+    
