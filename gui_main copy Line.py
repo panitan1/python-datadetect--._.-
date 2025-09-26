@@ -904,7 +904,7 @@ class LoginFrame(ctk.CTkFrame):
         self.height = self.winfo_height()
 
         # โหลดภาพและปรับขนาด
-        img = Image.open("gui\\bkmain1.png")
+        img = Image.open("bkmain1.png")
         resized = img.resize((self.width, self.height))
         self.Show_BG_Sky = ctk.CTkImage(light_image=resized, size=(self.width, self.height))
         self.im_show_BG_Sky = ctk.CTkLabel(self, text="", image=self.Show_BG_Sky)
@@ -924,7 +924,7 @@ class LoginFrame(ctk.CTkFrame):
         self.bkmain_input.place(relx=0.5, rely=0, relwidth=0.5, relheight=1)
 
 
-        self.img_let1 = Image.open("gui\\img2.png")
+        self.img_let1 = Image.open("img2.png")
         resized = self.img_let1.resize((self.width, self.height))
         self.Show_img_let1 = ctk.CTkImage(light_image=resized, size=(self.width, self.height))
         self.im_show_img_let1 = ctk.CTkLabel(self.bkmain2, text="", image=self.Show_img_let1 )
@@ -1077,7 +1077,7 @@ class App(ctk.CTk):
         self.Login_response = Loginpy()
         self.MasterLog_app.info("Application started")
         self.title("โปรแกรมตรวจจับรถจักรยานยนต์บนทางเท้า")
-        self.iconbitmap("gui\\bkmain1.ico")
+        self.iconbitmap("bkmain1.ico")
         self.LoginFFrame = LoginFrame(self)
         self.LoginFFrame.pack(fill="both", expand=True)
         width = self.winfo_screenwidth() 
