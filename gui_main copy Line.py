@@ -132,15 +132,16 @@ class APP_SY_Frame(ctk.CTkFrame):
         self.My_checkOut_cm2 = {} 
         self.db = datasql()
         self.master_log_set = MasterLog()
-        
+        self.last_frame_cam1 = None
+        self.last_frame_cam2 = None
         
 
     def MuNuAPP_main(self):
         self.munubar = CTkMenuBar(self)
         self.buttun01 = self.munubar.add_cascade("Munu")
         self.dropdown = CustomDropdownMenu(widget=self.buttun01)
-        self.dropdown.add_option(option="Camela 1")
-        self.dropdown.add_option(option="Camela 2")
+        self.dropdown.add_option(option="Camela 1" , command=lambda: self.save_snapshot("cam1"))
+        self.dropdown.add_option(option="Camela 2", command=lambda: self.save_snapshot("cam2"))
         self.dropdown.add_separator() 
         self.dropdown.add_option(option="Folder " ,command= self.Folder)
         self.MuNuAPP_Profile_and_Dash()
@@ -285,6 +286,7 @@ class APP_SY_Frame(ctk.CTkFrame):
             annotated_frame1 = runYOLOm1[0]
             frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             original_frame = frame.copy()
+            self.last_frame_cam1 = original_frame.copy()
             cv2.line(frame, self.Line1[0], self.Line1[1], (255, 0, 255), 3)
             annotator = Annotator(frame)
 
@@ -434,6 +436,8 @@ class APP_SY_Frame(ctk.CTkFrame):
             annotated_frame1 = runYOLOm1[0]
             frame2 = cv2.cvtColor(frame2, cv2.COLOR_BGR2RGB)
             original_frame = frame2.copy()
+            self.last_frame_cam2 = original_frame.copy()
+
             cv2.line(frame2, self.Line2[0], self.Line2[1], (255, 0, 255), 3)
             annotator = Annotator(frame2)
  
@@ -925,7 +929,41 @@ class APP_SY_Frame(ctk.CTkFrame):
             callback_on_click=on_click
         )
 
+    def save_snapshot(self, cam: str = "cam1"):
+            ts = datetime.now(pytz.timezone('Asia/Bangkok')).strftime("%Y-%m-%d_%H-%M-%S")
+            out_dir = os.path.join("Snapshots", datetime.now().strftime("%Y-%m-%d"))
+            os.makedirs(out_dir, exist_ok=True)
 
+            # แก้ไขบรรทัดนี้: เปลี่ยน self.snapshot_lock เป็น self.save_lock
+            with self.save_lock: 
+                if cam == "cam1":
+                    frame_rgb = self.last_frame_cam1
+                    cam_tag = "cam1"
+                else:
+                    frame_rgb = self.last_frame_cam2
+                    cam_tag = "cam2"
+
+                if frame_rgb is None:
+                    CTkMessagebox(title="ยังไม่มีภาพ",
+                                message=f"ยังไม่มีเฟรมล่าสุดจาก {cam_tag} หรือกล้องยังไม่พร้อม",
+                                icon="warning")
+                    return
+
+                # cv2.imwrite คาดหวัง BGR -> ต้องแปลงกลับก่อน
+                frame_bgr = cv2.cvtColor(frame_rgb, cv2.COLOR_RGB2BGR)
+                out_path = os.path.join(out_dir, f"{ts}_{cam_tag}.png")
+
+                ok = cv2.imwrite(out_path, frame_bgr)
+
+            if ok:
+                CTkMessagebox(title="บันทึกแล้ว ✅",
+                            message=f"เซฟรูปเรียบร้อย:\n{out_path}",
+                            icon="check")
+            else:
+                CTkMessagebox(title="บันทึกไม่สำเร็จ ❌",
+                            message="ไม่สามารถบันทึกรูปได้",
+                            icon="cancel")
+        
 
 class LoginFrame(ctk.CTkFrame):
     def __init__(self, master):

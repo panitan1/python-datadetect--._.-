@@ -404,3 +404,38 @@
 2025-09-27 11:35:52,051 - INFO - Application started
 2025-09-27 11:35:56,274 - INFO - User Out program.
 2025-09-27 11:35:56,274 - INFO - No user is currently logged in.
+2025-09-27 12:03:35,288 - INFO - Application started
+2025-09-27 12:03:44,212 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTQ5NDI0LCJleHAiOjE3NTg5NTMwMjR9.oZXeNfkJHwTDn0zXMfj-XNa_ooAfr8r7SDDgkl3Eeds', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 12:03:44,212 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 12:03:44,555 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000021C43F52750>
+2025-09-27 12:03:46,471 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 12:03:47,701 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 12:03:47,710 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 12:03:47,712 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 12:04:07,832 - INFO - User Out program.
+2025-09-27 12:04:07,832 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 12:08:07,676 - INFO - Application started
+2025-09-27 12:08:11,282 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTQ5NjkxLCJleHAiOjE3NTg5NTMyOTF9.DiDhqgAuexI3ahTdee-mDyIrKVr_iErlWJ3wspnJUIM', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 12:08:11,282 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 12:08:14,047 - INFO - User Out program.
+2025-09-27 12:08:14,047 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 12:10:20,843 - INFO - Application started
+2025-09-27 12:10:23,875 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTQ5ODIzLCJleHAiOjE3NTg5NTM0MjN9.FGfVZ-iNA9IvPyKrsrCP7be-0UNx-EQMKw8B50Qo03k', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 12:10:23,875 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 12:10:24,142 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000212D8193D50>
+2025-09-27 12:10:25,888 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 12:10:27,166 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 12:10:27,166 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 12:10:27,169 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 12:10:37,015 - INFO - User Out program.
+2025-09-27 12:10:37,015 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 12:11:40,962 - INFO - Application started
+2025-09-27 12:11:43,332 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTQ5OTAzLCJleHAiOjE3NTg5NTM1MDN9.u8z_3K3M5uw3Q-rzmMj3gfjgFigp-bLNhgcqsfhFJ-E', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 12:11:43,332 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 12:11:43,587 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001F52EC43590>
+2025-09-27 12:11:45,292 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 12:11:46,581 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 12:11:46,582 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 12:11:46,586 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 12:11:57,390 - INFO - User Out program.
+2025-09-27 12:11:57,390 - INFO - Logout user: panitan.thainlek@gmail.com
