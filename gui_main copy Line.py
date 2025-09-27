@@ -154,7 +154,6 @@ class APP_SY_Frame(ctk.CTkFrame):
     def MuNuAPP_Profile_and_Dash(self):
         self.buttun02 = self.munubar.add_cascade("Profile")
         self.dropdown2 = CustomDropdownMenu(widget=self.buttun02)
-        self.dropdown2.add_option(option="Profile", command= lambda: webbrowser.open("http://localhost:5173/"))
         self.dropdown2.add_option(option="Dashboard" , command= lambda: webbrowser.open("http://localhost:5173/dashdata"))
         self.dropdown2.add_separator() 
         self.dropdown2.add_option(option="Logout" ,command=self.from_logout_)
