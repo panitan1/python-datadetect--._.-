@@ -142,6 +142,7 @@ class APP_SY_Frame(ctk.CTkFrame):
         self.dropdown = CustomDropdownMenu(widget=self.buttun01)
         self.dropdown.add_option(option="Camela 1" , command=lambda: self.save_snapshot("cam1"))
         self.dropdown.add_option(option="Camela 2", command=lambda: self.save_snapshot("cam2"))
+        self.dropdown.add_option(option="polygonzone", command= lambda: webbrowser.open("https://polygonzone.roboflow.com"))
         self.dropdown.add_separator() 
         self.dropdown.add_option(option="Folder " ,command= self.Folder)
         self.MuNuAPP_Profile_and_Dash()
