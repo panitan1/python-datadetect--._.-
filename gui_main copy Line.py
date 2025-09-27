@@ -10,9 +10,9 @@ import cv2
 import sys
 import os
 import threading
-from ultralytics import YOLO ,solutions
+from ultralytics import YOLO 
 from ultralytics.utils.plotting import Annotator , Colors 
-from datetime import datetime ,timedelta
+from datetime import datetime 
 import time
 from server_mysql.mysql_server import datasql ,Loginpy
 from win10toast_click import ToastNotifier
@@ -20,11 +20,58 @@ from server_mysql.mysql_server import MasterLog
 import re
 import json
 from queue import Queue
+from collections import deque
+# --- Performance toggles (ADD) ---
+cv2.setUseOptimized(True)
+cv2.setNumThreads(1)  # กัน CPU thread แย่งกันเกินไป
+
 ctk.set_appearance_mode("System")
 ctk.set_default_color_theme("green")
 ctk.deactivate_automatic_dpi_awareness()
 ctk.set_window_scaling(1.0)
 ctk.set_widget_scaling(1.0)
+
+class RTSPReader:
+    def __init__(self, cap):
+        self.cap = cap
+        self.latest = deque(maxlen=1)
+        self.running = True
+        self.t = threading.Thread(target=self._loop, daemon=True)
+        self.t.start()
+
+    def _loop(self):
+        while self.running:
+            if not self.cap.isOpened():
+                time.sleep(0.05)
+                continue
+            # ลดคิวเฟรมค้าง
+            if not self.cap.grab():
+                time.sleep(0.005)
+                continue
+            ok, frame = self.cap.retrieve()
+            if ok and frame is not None:
+                self.latest.append(frame)
+            else:
+                time.sleep(0.005)
+
+    def read(self, timeout=0.5):
+        """คืนค่า (ret, frame). ret=False เมื่อยังไม่มีเฟรมภายใน timeout"""
+        t0 = time.time()
+        while self.running and (time.time() - t0) < timeout:
+            if self.latest:
+                return True, self.latest[-1]
+            time.sleep(0.005)
+        return False, None
+
+    def stop(self):
+        self.running = False
+        try:
+            self.t.join(timeout=0.2)
+        except:
+            pass
+
+    
+
 class APP_SY_Frame(ctk.CTkFrame):
     def __init__(self , master):
         super().__init__(master)
@@ -34,6 +81,7 @@ class APP_SY_Frame(ctk.CTkFrame):
         ctk.set_window_scaling(1.0)
         ctk.set_widget_scaling(1.0)
         ctk.deactivate_automatic_dpi_awareness()
+        
         self.save_lock = threading.Lock()
         self.user_email = self.master.user_info
         self.Time_CM1_MO1 = None  # เพิ่มตัวแปรสำหรับเก็บเวลา
@@ -75,8 +123,6 @@ class APP_SY_Frame(ctk.CTkFrame):
         self.Time_cam2_oj = None
         self.Time_cam1_oj = None
         
-
-
         self.im_save_CHECK_Id_model1_cm1 = set()
         self.im_save_CHECK_Id_model1_cm2 = set()
         
@@ -179,16 +225,18 @@ class APP_SY_Frame(ctk.CTkFrame):
         
         self.My_show_img2_cap2 = ctk.CTkLabel(self.box2_cap2, text="")
         self.My_show_img2_cap2.pack(expand=True, fill="both")
-        
+       
     def Process_Cam01(self):
         
         self.My_cap1()
-        self.model = YOLO("best2.pt").cuda()
+        self.model = YOLO("best2.pt").to(0)
+
         self.cam01 = cv2.VideoCapture(
             "rtsp://admin:Demaxzzo001@192.168.1.133:554/cam/realmonitor?channel=1&subtype=0"
         )
         
-
+        self.cam01.set(cv2.CAP_PROP_BUFFERSIZE, 1)
+        reader1 = RTSPReader(self.cam01)
         if not self.cam01.isOpened():
             self.master_log_set.error(f"User: {self.user_email} Failed to open Camera 01.")
             self.Check_Cam1_ = False
@@ -219,31 +267,27 @@ class APP_SY_Frame(ctk.CTkFrame):
         frame_width = int(self.cam01.get(cv2.CAP_PROP_FRAME_WIDTH))
         frame_height = int(self.cam01.get(cv2.CAP_PROP_FRAME_HEIGHT))
         fps = int(self.cam01.get(cv2.CAP_PROP_FPS)) or 30
-        self.out2 = cv2.VideoWriter(f"vidioodetect1/output_detected_1.avi", fourcc, fps, (frame_width, frame_height))
+        self.out1 = cv2.VideoWriter(f"vidioodetect1/output_detected_1.avi", fourcc, fps, (frame_width, frame_height))
         self.master_log_set.info(f"User: {self.user_email} connect to Camera 1") 
         while self.running:
 
-            ret, frame = self.cam01.read()
+            ret, frame = reader1.read()
             
             if not ret or frame is None:
                 self.ERRORCAM_pp001 = "กล้องหมายเลข 1 ไม่ทำงาน กรุณาตรวจสอบการเชื่อมต่อ {ret}"
                 CTkMessagebox(title="Error", message=f"กล้องหมายเลข 1 ไม่ทำงาน กรุณาตรวจสอบการเชื่อมต่อ \n {ret}", icon="cancel")
                 self.Check_Cam1_ = False
                 self.master_log_set.error(f"User: {self.user_email} Failed to connect to Camera 1 {ret}")
-                continue
-            
-            self.out2.write(cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)) 
-            runYOLOm1 = self.model.track(frame, classes=[1], conf=0.5, persist=True, tracker="gui\\botsort.yaml",device=0 )
+                break
+
+            self.out1.write(cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)) 
+            runYOLOm1 = self.model.track(frame, classes=[1], conf=0.5, persist=True,device="cuda" , imgsz=640 )
             annotated_frame1 = runYOLOm1[0]
             frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             original_frame = frame.copy()
-            original_frame = cv2.cvtColor(original_frame, cv2.COLOR_BGR2RGB)
             cv2.line(frame, self.Line1[0], self.Line1[1], (255, 0, 255), 3)
             annotator = Annotator(frame)
-            annotated_frame = annotator.result()
-            
-            
-            
+
             
             self.Tz = pytz.timezone('Asia/Bangkok')
             self.Time_cm1_Model1 = datetime.now(self.Tz)
@@ -292,7 +336,7 @@ class APP_SY_Frame(ctk.CTkFrame):
 
                             if self.Crop_Img_c1_model_1.size >= 1:
              
-                                runYOLOm2 = self.model.predict(original_frame, classes=[0], iou = 0.5)
+                                runYOLOm2 = self.model.predict(original_frame, classes=[0], iou = 0.5 , device="cpu")
                                 annotated_frame2 = runYOLOm2[0]
                                 
                                 if annotated_frame2.boxes is not None:
@@ -327,12 +371,12 @@ class APP_SY_Frame(ctk.CTkFrame):
 
 
                 try:
-                    # frame = cv2.resize(frame, (1152, 480)) 
-                    img1 = Image.fromarray(frame)
-                    label_width = self.My_run_cam1_gui.winfo_width()
-                    label_height = self.My_run_cam1_gui.winfo_height()
-                    resiz_img = img1.resize((label_width, label_height))
-                    imgTK = ImageTk.PhotoImage(image=resiz_img)
+                    frame_gi = cv2.resize(frame, (1152, 480)) 
+                    img1 = Image.fromarray(frame_gi)
+                    # label_width = self.My_run_cam1_gui.winfo_width()
+                    # label_height = self.My_run_cam1_gui.winfo_height()
+                    # resiz_img = img1.resize((label_width, label_height))
+                    imgTK = ImageTk.PhotoImage(image=img1)
                 
                     # อัปเดต GUI
                     self.My_run_cam1_gui.configure(image=imgTK)
@@ -340,16 +384,18 @@ class APP_SY_Frame(ctk.CTkFrame):
                     # cv2.waitKey(1)
                 except:
                     pass
-        
-                time.sleep(0.01)
 
 
+                    
     def Process_Cam02(self): 
         self.My_cap2()
-        self.model22 = YOLO("best.pt").cuda()
+        self.model22 = YOLO("best.pt").to(0)
+
         self.cam02 = cv2.VideoCapture(
             "rtsp://admin:Demaxzzo001@192.168.1.134:554/cam/realmonitor?channel=1&subtype=0"
         )
+        self.cam02.set(cv2.CAP_PROP_BUFFERSIZE, 1)
+        reader2 = RTSPReader(self.cam02)
         if not self.cam02.isOpened():
             self.master_log_set.error(f"User: {self.user_email} Failed to open Camera 02.")
             self.Check_Cam2_ = False
@@ -376,22 +422,21 @@ class APP_SY_Frame(ctk.CTkFrame):
         self.master_log_set.info(f"User: {self.user_email} connect to Camera 2")  
         while self.running:
  
-            ret, frame2 = self.cam02.read()
+            ret, frame2 = reader2.read()
             if not ret or frame2 is None:
                 self.ERRORCAM_pp002 = "กล้องหมายเลข 2 ไม่ทำงาน กรุณาตรวจสอบการเชื่อมต่อ {ret}"
                 CTkMessagebox(title="Error", message=f"กล้องหมายเลข 2 ไม่ทำงาน กรุณาตรวจสอบการเชื่อมต่อ \n {ret}", icon="cancel")
                 self.Check_Cam2_ = False
                 self.master_log_set.error(f"User: {self.user_email} Failed to connect to Camera 2 {ret}")
-                continue
+                break
             self.out2.write(cv2.cvtColor(frame2, cv2.COLOR_RGB2BGR)) 
-            runYOLOm1 = self.model22.track(frame2, classes=[1], conf=0.5, persist=True  , tracker="gui\\botsort.yaml" , device=0)
+            runYOLOm1 = self.model22.track(frame2, classes=[1], conf=0.5, persist=True , device="cuda" , imgsz=640)
             annotated_frame1 = runYOLOm1[0]
             frame2 = cv2.cvtColor(frame2, cv2.COLOR_BGR2RGB)
             original_frame = frame2.copy()
-            original_frame = cv2.cvtColor(original_frame, cv2.COLOR_BGR2RGB)
             cv2.line(frame2, self.Line2[0], self.Line2[1], (255, 0, 255), 3)
             annotator = Annotator(frame2)
-            annotated_frame = annotator.result()
+ 
             
             
             self.Tz = pytz.timezone('Asia/Bangkok')
@@ -412,7 +457,6 @@ class APP_SY_Frame(ctk.CTkFrame):
 
                         self.id_Time_check_c2_m1[track_id] = current_time_ids
                         annotator.box_label(xyxy_if_model1, label=f"motorcycle_c2: CONF={Conf_if_model1:.2f} ID={int(track_id)}" , color=(51, 255, 51) , txt_color=	(252, 109, 47))
-                        print(f"🎀🪞🩰🦢🕯️:    {Conf_if_model1}")
                
                         if (track_id not in self.im_save_CHECK_Id_model1_cm2) and self.is_Check_LINE2(cx, cy):
                             self.im_save_CHECK_Id_model1_cm2.add(track_id)
@@ -433,7 +477,7 @@ class APP_SY_Frame(ctk.CTkFrame):
                             self.after(5000, self.clear_image_after_delay)
                             if self.Crop_Img_c2_model_1.size >= 1:
                             
-                                runYOLOm2 = self.model22.predict(original_frame, classes=[0])
+                                runYOLOm2 = self.model22.predict(original_frame, classes=[0],device = "cpu")
                                 annotated_frame2 = runYOLOm2[0]
                                 
                                 if annotated_frame2.boxes is not None:
@@ -470,23 +514,20 @@ class APP_SY_Frame(ctk.CTkFrame):
                             self.Crop_Img_c2_model_1 = None
                             self.Crop_Img_c2_model_2 = None
                     
-
-
                 try:
-                    # frame2 = cv2.resize(frame2, (1152, 480)) 
-                    img2 = Image.fromarray(frame2)
-                    label_width = self.My_run_cam2_gui.winfo_width()
-                    label_height = self.My_run_cam2_gui.winfo_height()
-                    resiz_img = img2.resize((label_width, label_height))
-                    imgTK2 = ImageTk.PhotoImage(image=resiz_img)
-                    
+                    frame2_gi = cv2.resize(frame2, (1152, 480)) 
+                    img2 = Image.fromarray(frame2_gi)
+                    # label_width = self.My_run_cam2_gui.winfo_width()
+                    # label_height = self.My_run_cam2_gui.winfo_height()
+                    # resiz_img = img2.resize((label_width, label_height))
+                    imgTK2 = ImageTk.PhotoImage(image=img2)
                     self.My_run_cam2_gui.configure(image=imgTK2)
                     self.My_run_cam2_gui.image = imgTK2
 
                     # cv2.waitKey(1)
                 except:
                     pass
-                time.sleep(0.01)
+
 
     def clear_image_after_delay(self):
         self.My_show_img1_cap2.configure(image="", text="")
@@ -510,9 +551,6 @@ class APP_SY_Frame(ctk.CTkFrame):
         
         self.Crop_Img_c1_model_1 = None
 
-
-
-    
     def is_Check_LINE1(self, cx, cy):
         x1, y1 = self.Line1[0]
         x2, y2 = self.Line1[1]
@@ -895,7 +933,7 @@ class LoginFrame(ctk.CTkFrame):
         self.master = master
         self.bind("<Configure>", self.Show_img_BkMain)
         self.Bk_laout_1()
-        self.path_jsov_email = "gui\\saved_email.json"
+        self.path_jsov_email = "saved_email.json"
         self.Email_save = self.Load_Email()
         
         
@@ -933,7 +971,6 @@ class LoginFrame(ctk.CTkFrame):
         self.bkmain_input.bind("<Configure>" , self.In_Put_index)
 
     def resize_img_in_bkmain2(self, event):
-        # print(f"Event widget: {event.widget}, Width: {event.width}, Height: {event.height}")
         width = event.width
         height = event.height
         resized_img = self.img_let1.resize((width, height))
