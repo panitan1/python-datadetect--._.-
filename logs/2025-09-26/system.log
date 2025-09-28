@@ -3,3 +3,794 @@
 2025-09-26 15:50:31,491 - INFO - Application started
 2025-09-26 15:50:36,852 - INFO - User Out program.
 2025-09-26 15:50:36,852 - INFO - No user is currently logged in.
+2025-09-26 16:00:28,273 - INFO - Application started
+2025-09-26 16:00:59,430 - ERROR - Login fail ❌: {"success":false,"message":"User not found"}
+2025-09-26 16:00:59,431 - INFO - Login failed for user: panitan.thainlek@hotmail.com
+2025-09-26 16:01:02,127 - ERROR - Login fail ❌: {"success":false,"message":"User not found"}
+2025-09-26 16:01:02,127 - INFO - Login failed for user: panitan.thainlek@hotmail.com
+2025-09-26 16:03:57,115 - INFO - User Out program.
+2025-09-26 16:03:57,117 - INFO - No user is currently logged in.
+2025-09-26 17:14:06,504 - INFO - Application started
+2025-09-26 17:14:28,146 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODgxNjY4LCJleHAiOjE3NTg4ODUyNjh9.kOeBFBQhVFc99eJAvP4Vysk7jDybEvHKkILPiDETvQQ', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 17:14:28,147 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 17:14:31,007 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODgxNjcxLCJleHAiOjE3NTg4ODUyNzF9.rKDMsrqQ9tHJrLN2O6ZdeEKONiNeAhHuqF9k06FAfww', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 17:14:31,007 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 17:14:47,489 - INFO - User Out program.
+2025-09-26 17:14:47,489 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 17:14:51,213 - INFO - Application started
+2025-09-26 17:15:07,021 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODgxNzA3LCJleHAiOjE3NTg4ODUzMDd9.uTE-wvz84xpSmhqu3ygL2K2HCUZx4oIRIrOTgGQ4ooc', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 17:15:07,021 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 17:15:07,329 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000002A7DB4BA750>
+2025-09-26 17:15:08,052 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 17:15:08,067 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 17:15:08,073 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 17:15:08,075 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 17:15:21,722 - INFO - User Out program.
+2025-09-26 17:15:21,722 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 17:16:11,314 - INFO - Application started
+2025-09-26 17:16:14,393 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODgxNzc0LCJleHAiOjE3NTg4ODUzNzR9.uWKX-dIUdsIIpfNtFWjm1MPrCSmbakXxfJBVF_h-R5g', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 17:16:14,393 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 17:16:22,204 - INFO - User Out program.
+2025-09-26 17:16:22,204 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 17:17:44,896 - INFO - Application started
+2025-09-26 17:17:47,487 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODgxODY3LCJleHAiOjE3NTg4ODU0Njd9.cy5RbUtTZRDQhpcUwPfOmNHbrHFcboYGajEhD1lHug4', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 17:17:47,487 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 17:17:47,935 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001B20FE5A750>
+2025-09-26 17:17:48,062 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 17:17:48,078 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 17:17:48,081 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 17:17:48,084 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 17:18:07,033 - INFO - User Out program.
+2025-09-26 17:18:07,033 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 17:18:20,153 - INFO - Application started
+2025-09-26 17:18:22,640 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODgxOTAyLCJleHAiOjE3NTg4ODU1MDJ9.9M7QK59NO8hFapvZIjyOHn_rPmqBTD1hlc3-k7McGWo', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 17:18:22,640 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 17:18:23,092 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000167C86A2750>
+2025-09-26 17:18:23,205 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 17:18:23,221 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 17:18:23,223 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 17:18:23,224 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 17:18:48,355 - INFO - User Out program.
+2025-09-26 17:18:48,355 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 17:18:52,529 - INFO - Application started
+2025-09-26 17:18:54,996 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODgxOTM0LCJleHAiOjE3NTg4ODU1MzR9.x7TRVT_JTvpJVw0Ng3KTL6VzEQmcqqEXVuwUp1oaJ2A', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 17:18:54,996 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 17:18:55,416 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000020D60CD2750>
+2025-09-26 17:18:55,532 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 17:18:55,548 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 17:18:55,550 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 17:18:55,551 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 17:19:05,337 - INFO - User Out program.
+2025-09-26 17:19:05,337 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 17:23:31,779 - INFO - Application started
+2025-09-26 17:23:52,477 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODgyMjMyLCJleHAiOjE3NTg4ODU4MzJ9.5ubbxl7o-2eCKxDXgnJjZzm2kz9xKC-AvRDv34Wlc7k', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 17:23:52,477 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 17:24:23,089 - INFO - User Out program.
+2025-09-26 17:24:23,089 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 17:24:27,134 - INFO - Application started
+2025-09-26 17:24:30,534 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODgyMjcwLCJleHAiOjE3NTg4ODU4NzB9.iyl-mgsBJLTEj5FjcQCWrhhF0tP8sbcO-QCmh9xoftI', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 17:24:30,534 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 17:24:30,821 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000002404ABE6610>
+2025-09-26 17:24:31,313 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 17:25:01,429 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 17:25:18,581 - INFO - User Out program.
+2025-09-26 17:25:18,581 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 17:25:22,535 - INFO - Application started
+2025-09-26 17:25:25,596 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODgyMzI1LCJleHAiOjE3NTg4ODU5MjV9.OgnmgwSBch2B6tPz6zl_O04kFUaKD8yeIhVkW2LHgSA', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 17:25:25,597 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 17:25:25,907 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000024402D72750>
+2025-09-26 17:25:26,343 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 17:25:56,447 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 17:26:10,232 - INFO - User Out program.
+2025-09-26 17:26:10,232 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 17:27:57,693 - INFO - Application started
+2025-09-26 17:28:00,472 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODgyNDgwLCJleHAiOjE3NTg4ODYwODB9.TMieuAuoqdHI75M0W3LOYoF0UGWR--gRFlnK3DWN8Uo', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 17:28:00,472 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 17:28:00,737 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000025488C9D890>
+2025-09-26 17:28:01,127 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 17:28:01,129 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 17:28:04,478 - INFO - User Out program.
+2025-09-26 17:28:04,478 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 17:28:49,220 - INFO - Application started
+2025-09-26 17:28:51,918 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODgyNTMxLCJleHAiOjE3NTg4ODYxMzF9.WFHojpnUwCCUDS8ETKJnn_QtAhSwgL080z8tBLgPUq8', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 17:28:51,918 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 17:28:52,202 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000020776824F90>
+2025-09-26 17:28:52,620 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 17:29:22,731 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 17:29:28,527 - INFO - User Out program.
+2025-09-26 17:29:28,527 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 17:32:52,159 - INFO - Application started
+2025-09-26 17:32:55,462 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODgyNzc1LCJleHAiOjE3NTg4ODYzNzV9.-wHLgStWQfoJAYCrkB59nVerA1JVecWgZw4KE6iF5cw', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 17:32:55,462 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 17:32:55,731 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000242CB7CDE10>
+2025-09-26 17:32:56,145 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 17:32:56,159 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 17:32:56,161 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 17:32:56,162 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 17:33:04,512 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:1 CONF:0.87
+2025-09-26 17:33:04,573 - INFO - User: {'id': 12} License plate detected by Camera 2 CONF:0.74
+2025-09-26 17:33:10,691 - INFO - User Out program.
+2025-09-26 17:33:10,692 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 17:33:15,843 - INFO - Application started
+2025-09-26 17:33:18,912 - INFO - User Out program.
+2025-09-26 17:33:18,912 - INFO - No user is currently logged in.
+2025-09-26 17:36:14,853 - INFO - Application started
+2025-09-26 17:36:18,502 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODgyOTc4LCJleHAiOjE3NTg4ODY1Nzh9.Z3d7LvqK_RDjo-IyD1U8o-VsxKZZu9mV7pWvuYOevLE', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 17:36:18,502 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 17:36:18,719 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000016B96A4A750>
+2025-09-26 17:36:19,633 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 17:36:19,634 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 17:36:19,651 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 17:36:19,656 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 17:36:41,102 - INFO - User Out program.
+2025-09-26 17:36:41,102 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 17:37:54,739 - INFO - Application started
+2025-09-26 17:37:57,682 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODgzMDc3LCJleHAiOjE3NTg4ODY2Nzd9.q0vEbsXPtJBt3v5AZn_l_iBzXicfyCzcmSYb8TkH7Mg', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 17:37:57,682 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 17:37:57,965 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000023CAA2162D0>
+2025-09-26 17:37:58,389 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 17:37:58,403 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 17:37:58,411 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 17:37:58,413 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 17:38:07,976 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:1 CONF:0.87
+2025-09-26 17:38:08,035 - INFO - User: {'id': 12} License plate detected by Camera 2 CONF:0.74
+2025-09-26 17:38:15,789 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:15,958 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:16,146 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:16,344 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:16,534 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:16,708 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:16,875 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:17,044 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:17,224 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:17,410 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:17,679 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:17,936 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:18,163 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:18,438 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:18,665 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:18,918 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:19,166 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:19,405 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:19,647 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:19,829 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:20,083 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:20,334 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:20,550 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:20,897 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:21,127 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:21,378 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:21,599 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:21,812 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:22,024 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:22,248 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:22,423 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:22,664 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:22,886 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:23,169 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:23,367 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:23,632 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:23,861 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:24,113 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:38:24,400 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:39:13,949 - INFO - Application started
+2025-09-26 17:39:18,673 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODgzMTU4LCJleHAiOjE3NTg4ODY3NTh9.eU2ep-JLGTCt_-E1ELWXjBQKYvZMfY7l3gyVb8HFtr0', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 17:39:18,673 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 17:39:18,930 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001F5A3DFD990>
+2025-09-26 17:39:19,362 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 17:39:19,364 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 17:39:19,381 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 17:39:19,384 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 17:39:27,654 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:1 CONF:0.87
+2025-09-26 17:39:27,713 - INFO - User: {'id': 12} License plate detected by Camera 2 CONF:0.74
+2025-09-26 17:39:35,990 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:39:36,180 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:39:36,374 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:39:36,588 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:39:36,860 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:39:37,133 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:39:37,362 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:39:37,553 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:39:37,772 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:39:37,991 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:39:38,382 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:39:38,677 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:39:38,913 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:39:39,212 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:39:39,406 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:39:47,191 - INFO - Application started
+2025-09-26 17:39:50,990 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODgzMTkwLCJleHAiOjE3NTg4ODY3OTB9.QKgZuBuSURE0wd43LSS07XRp0nwoN_8Hq4nNIRgGe4g', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 17:39:50,990 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 17:39:51,220 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000021AD921CB50>
+2025-09-26 17:39:51,653 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 17:39:51,668 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 17:39:51,670 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 17:39:51,671 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 17:39:59,842 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:1 CONF:0.87
+2025-09-26 17:39:59,924 - INFO - User: {'id': 12} License plate detected by Camera 2 CONF:0.74
+2025-09-26 17:39:59,932 - INFO - User: {'id': 12} Matched detection from Camera 2 only.
+2025-09-26 17:39:59,964 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 2
+2025-09-26 17:39:59,968 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 2
+2025-09-26 17:39:59,968 - INFO - User: {'id': 12} detection from Camera 2 only. Data saved successfully
+2025-09-26 17:40:07,622 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:40:07,800 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:40:08,063 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:40:08,261 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:40:08,533 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:40:08,761 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:40:08,982 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:40:09,160 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:40:09,352 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:40:09,523 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:40:09,689 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:40:09,862 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:40:10,097 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:40:10,436 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:40:10,766 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:40:11,008 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:40:11,235 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:40:11,506 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:40:11,705 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-26 17:40:37,600 - INFO - Application started
+2025-09-26 17:40:41,429 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODgzMjQxLCJleHAiOjE3NTg4ODY4NDF9.Fz5x1o0DPupUveMwr7F7ll-lBjL4_eFDI0dy31K8tjM', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 17:40:41,429 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 17:40:41,656 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001B89A83F150>
+2025-09-26 17:40:42,077 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 17:40:42,079 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 17:40:42,096 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 17:40:42,101 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 17:40:45,142 - INFO - User Out program.
+2025-09-26 17:40:45,142 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 17:41:24,343 - INFO - Application started
+2025-09-26 17:41:26,896 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODgzMjg2LCJleHAiOjE3NTg4ODY4ODZ9.vWI3gwj9Xg5JVvDR-yTuknjIutzjdvpmlOXL-cb4VQM', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 17:41:26,896 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 17:41:27,130 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001C3F5F695D0>
+2025-09-26 17:41:27,542 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 17:41:27,557 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 17:41:27,559 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 17:41:27,561 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 17:41:37,908 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:1 CONF: 0.90
+2025-09-26 17:41:37,993 - INFO - User: {'id': 12} License plate detected by Camera 1 CONF:0.83
+2025-09-26 17:41:38,001 - INFO - Matched detection from Camera 1 only.
+2025-09-26 17:41:38,019 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 
+2025-09-26 17:41:38,021 - INFO - User: {'id': 12} Save C1_Model2_0.png from Matched detection from Camera 1 
+2025-09-26 17:41:38,021 - INFO - User: {'id': 12} detection from Camera 1 only. Data saved successfully
+2025-09-26 17:41:45,285 - INFO - User Out program.
+2025-09-26 17:41:45,285 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 17:42:58,907 - INFO - Application started
+2025-09-26 17:43:02,102 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODgzMzgyLCJleHAiOjE3NTg4ODY5ODJ9.IjUi4bIwh-E2IGO22LMLICmreOEaLBa6SGUdwNwxFzE', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 17:43:02,102 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 17:43:02,363 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001F5DE5A0650>
+2025-09-26 17:43:02,787 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 17:43:02,802 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 17:43:02,803 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 17:43:02,804 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 17:43:12,424 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:1 CONF:0.87
+2025-09-26 17:43:12,492 - INFO - User: {'id': 12} License plate detected by Camera 2 CONF:0.74
+2025-09-26 17:43:14,384 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:3 CONF: 0.90
+2025-09-26 17:43:14,454 - INFO - User: {'id': 12} License plate detected by Camera 1 CONF:0.83
+2025-09-26 17:43:14,460 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-26 17:43:14,480 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-26 17:43:14,503 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-26 17:43:14,504 - INFO - User: {'id': 12} Save C1_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-26 17:43:14,506 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-26 17:43:14,510 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-26 17:43:17,036 - INFO - User Out program.
+2025-09-26 17:43:17,036 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 17:45:38,259 - INFO - Application started
+2025-09-26 17:45:41,124 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODgzNTQxLCJleHAiOjE3NTg4ODcxNDF9.PlY_T3--7RF4jkRL0NuZDV-rG-9ys32mNTL2zE-FAGs', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 17:45:41,126 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 17:45:41,434 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000029F231A2750>
+2025-09-26 17:45:41,883 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 17:45:41,900 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 17:45:41,902 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 17:45:41,903 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 17:45:50,080 - INFO - User Out program.
+2025-09-26 17:45:50,080 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 17:56:45,104 - INFO - Application started
+2025-09-26 17:56:47,524 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg0MjA3LCJleHAiOjE3NTg4ODc4MDd9.G184mf7vEflLrAtySbdpRgaa_0KRqUSHtAAaCu3QPP0', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 17:56:47,525 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 17:56:47,767 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001DC9BECA750>
+2025-09-26 17:56:48,229 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 17:56:48,244 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 17:56:48,247 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 17:56:48,249 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 17:56:57,117 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:1 CONF:0.87
+2025-09-26 17:56:57,180 - INFO - User: {'id': 12} License plate detected by Camera 2 CONF:0.74
+2025-09-26 17:56:59,090 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:3 CONF: 0.90
+2025-09-26 17:56:59,154 - INFO - User: {'id': 12} License plate detected by Camera 1 CONF:0.83
+2025-09-26 17:56:59,161 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-26 17:56:59,179 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-26 17:56:59,202 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-26 17:56:59,204 - INFO - User: {'id': 12} Save C1_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-26 17:56:59,206 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-26 17:56:59,210 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-26 17:57:00,579 - INFO - User Out program.
+2025-09-26 17:57:00,579 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 17:58:46,742 - INFO - Application started
+2025-09-26 17:58:51,000 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg0MzMwLCJleHAiOjE3NTg4ODc5MzB9.5a42rS6DYR0xozs2AUgKQ1asaP8bnvFZRh0DcGDdMJI', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 17:58:51,000 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 17:58:51,282 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001D13FF9A750>
+2025-09-26 17:58:51,710 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 17:58:51,712 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 17:58:51,729 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 17:58:51,733 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 17:59:00,422 - INFO - User Out program.
+2025-09-26 17:59:00,422 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 18:01:57,693 - INFO - Application started
+2025-09-26 18:02:00,403 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg0NTIwLCJleHAiOjE3NTg4ODgxMjB9.m9DZbCpw2yyMZzA0xmAWUhiasVaEQ8S8McdWRAbGDXc', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:02:00,403 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:02:00,670 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000233B8C8A750>
+2025-09-26 18:02:01,115 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 18:02:01,130 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 18:02:01,132 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 18:02:01,133 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 18:02:09,370 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:1 CONF:0.87
+2025-09-26 18:02:11,214 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:2 CONF: 0.90
+2025-09-26 18:02:12,221 - INFO - User Out program.
+2025-09-26 18:02:12,222 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 18:03:06,093 - INFO - Application started
+2025-09-26 18:03:08,635 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg0NTg4LCJleHAiOjE3NTg4ODgxODh9.25SBh7vLznH_8e7e80rY5Cvuzd_6aFj3tk5coEYzS8k', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:03:08,635 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:03:08,895 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001C54D016550>
+2025-09-26 18:03:09,315 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 18:03:09,331 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 18:03:09,332 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 18:03:09,333 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 18:03:17,985 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:1 CONF:0.87
+2025-09-26 18:03:18,046 - INFO - User: {'id': 12} License plate detected by Camera 2 CONF:0.74
+2025-09-26 18:03:19,660 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:2 CONF: 0.90
+2025-09-26 18:03:19,720 - INFO - User: {'id': 12} License plate detected by Camera 1 CONF:0.83
+2025-09-26 18:03:19,728 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-26 18:03:19,747 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-26 18:03:19,769 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-26 18:03:19,772 - INFO - User: {'id': 12} Save C1_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-26 18:03:19,773 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-26 18:03:19,781 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-26 18:03:23,932 - INFO - User Out program.
+2025-09-26 18:03:23,932 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 18:05:59,031 - INFO - Application started
+2025-09-26 18:06:02,039 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg0NzYyLCJleHAiOjE3NTg4ODgzNjJ9.Q4eeolSMnRvpubpMEuJs7wv8kvj502acysB95BncuGY', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:06:02,039 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:06:02,328 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000023FCB7B2750>
+2025-09-26 18:06:03,186 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 18:06:03,188 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 18:06:12,050 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:1 CONF:0.87
+2025-09-26 18:06:12,119 - INFO - User: {'id': 12} License plate detected by Camera 2 CONF:0.74
+2025-09-26 18:06:12,127 - INFO - User: {'id': 12} Matched detection from Camera 2 only.
+2025-09-26 18:06:12,148 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 2
+2025-09-26 18:06:12,151 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 2
+2025-09-26 18:06:12,151 - INFO - User: {'id': 12} detection from Camera 2 only. Data saved successfully
+2025-09-26 18:06:12,322 - INFO - User Out program.
+2025-09-26 18:06:12,322 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 18:09:13,207 - INFO - Application started
+2025-09-26 18:09:15,869 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg0OTU1LCJleHAiOjE3NTg4ODg1NTV9.uMgNGVwaJSj1Mttysxwe5MyDUajTxzTU2WNNaLekCcE', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:09:15,869 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:09:16,123 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001E48561C6D0>
+2025-09-26 18:09:16,549 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 18:09:16,565 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 18:09:16,566 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 18:09:16,568 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 18:09:28,400 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:1 CONF:0.87
+2025-09-26 18:09:28,469 - INFO - User: {'id': 12} License plate detected by Camera 2 CONF:0.74
+2025-09-26 18:09:29,897 - INFO - User Out program.
+2025-09-26 18:09:29,897 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 18:11:50,521 - INFO - Application started
+2025-09-26 18:11:53,491 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg1MTEzLCJleHAiOjE3NTg4ODg3MTN9.jij-8wPN0CYb9Z2fs35pQlyhVkxSuXP52X6ZvaZvJMo', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:11:53,491 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:11:53,762 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001ECADCA6290>
+2025-09-26 18:12:20,271 - INFO - Application started
+2025-09-26 18:12:22,644 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg1MTQyLCJleHAiOjE3NTg4ODg3NDJ9.wCZwh4_QkYVz0cHlRRfHigySY-g1q9Q7wiljv8GCBwE', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:12:22,644 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:12:22,913 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000002418257EE10>
+2025-09-26 18:12:23,309 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 18:12:23,323 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 18:12:23,325 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 18:12:23,326 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 18:12:34,043 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:1 CONF:0.87
+2025-09-26 18:12:34,123 - INFO - User: {'id': 12} License plate detected by Camera 2 CONF:0.74
+2025-09-26 18:12:34,313 - INFO - User Out program.
+2025-09-26 18:12:34,313 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 18:14:04,418 - INFO - Application started
+2025-09-26 18:14:07,209 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg1MjQ3LCJleHAiOjE3NTg4ODg4NDd9.kYgJN2mMUYfHRwLbwCA4ExA6G-PJeiiZKEQHyia46Uo', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:14:07,209 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:14:07,471 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000023AD93AADD0>
+2025-09-26 18:14:07,907 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 18:14:07,921 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 18:14:07,923 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 18:14:07,925 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 18:14:18,806 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:1 CONF:0.87
+2025-09-26 18:14:18,880 - INFO - User: {'id': 12} License plate detected by Camera 2 CONF:0.74
+2025-09-26 18:14:19,084 - INFO - User Out program.
+2025-09-26 18:14:19,084 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 18:14:27,221 - INFO - Application started
+2025-09-26 18:14:29,346 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg1MjY5LCJleHAiOjE3NTg4ODg4Njl9.64g9WyYucDuRhUNoq-UZMZLEo97u_-0SuU5XzWQXUNE', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:14:29,347 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:14:29,578 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001C58CD9A610>
+2025-09-26 18:14:29,960 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 18:14:29,963 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 18:14:29,979 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 18:14:29,981 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 18:14:36,805 - INFO - User Out program.
+2025-09-26 18:14:36,805 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 18:14:58,851 - INFO - Application started
+2025-09-26 18:15:01,263 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg1MzAxLCJleHAiOjE3NTg4ODg5MDF9.jwSuL1qRCgkT0UNCVWq7A-qgozbMRr7xGtQUFKvJ0I0', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:15:01,263 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:15:01,511 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000299CDDADB50>
+2025-09-26 18:15:01,891 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 18:15:01,907 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 18:15:01,909 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 18:15:01,910 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 18:15:11,984 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:1 CONF:0.87
+2025-09-26 18:15:12,050 - INFO - User: {'id': 12} License plate detected by Camera 2 CONF:0.74
+2025-09-26 18:15:13,568 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:3 CONF: 0.90
+2025-09-26 18:15:13,635 - INFO - User: {'id': 12} License plate detected by Camera 1 CONF:0.83
+2025-09-26 18:15:13,641 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-26 18:15:13,663 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-26 18:15:13,685 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-26 18:15:13,688 - INFO - User: {'id': 12} Save C1_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-26 18:15:13,690 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-26 18:15:13,698 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-26 18:15:16,721 - INFO - User Out program.
+2025-09-26 18:15:16,721 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 18:20:12,075 - INFO - Application started
+2025-09-26 18:20:16,835 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg1NjE2LCJleHAiOjE3NTg4ODkyMTZ9.rhmwyQxKUmUUWqb1E3aQym62Yz3JRxgKe10l8Sk-KYs', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:20:16,836 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:20:18,952 - INFO - User Out program.
+2025-09-26 18:20:18,952 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 18:22:34,819 - INFO - Application started
+2025-09-26 18:22:37,859 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg1NzU3LCJleHAiOjE3NTg4ODkzNTd9.HzE4SlJP_cLv2CbA352LhxHcM9nQ-oWCytq-KnrH3tY', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:22:37,859 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:22:38,120 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000022247576C90>
+2025-09-26 18:22:38,520 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 18:22:38,522 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 18:22:38,542 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 18:22:38,545 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 18:22:49,255 - INFO - User Out program.
+2025-09-26 18:22:49,255 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 18:23:53,828 - INFO - Application started
+2025-09-26 18:23:56,442 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg1ODM2LCJleHAiOjE3NTg4ODk0MzZ9.UU7NYdloxqML1j3r8z5xGNX7oBAaa7aHJ2kTuVtzlxA', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:23:56,442 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:23:56,665 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000018C2B242350>
+2025-09-26 18:23:57,037 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 18:23:57,039 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 18:23:57,058 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 18:23:57,060 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 18:24:15,728 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:1 CONF:0.87
+2025-09-26 18:24:15,801 - INFO - User: {'id': 12} License plate detected by Camera 2 CONF:0.74
+2025-09-26 18:24:16,738 - INFO - User Out program.
+2025-09-26 18:24:16,738 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 18:25:32,141 - INFO - Application started
+2025-09-26 18:25:34,450 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg1OTM0LCJleHAiOjE3NTg4ODk1MzR9.tOV8Hx6ArwsRMAhh6hmbSk71C9eaTfi-ZZNXwUGCVL4', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:25:34,450 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:25:34,787 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001CAD6512550>
+2025-09-26 18:25:35,303 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 18:25:35,317 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 18:25:35,320 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 18:25:35,322 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 18:25:46,302 - INFO - User Out program.
+2025-09-26 18:25:46,302 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 18:26:28,965 - INFO - Application started
+2025-09-26 18:26:33,972 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg1OTkzLCJleHAiOjE3NTg4ODk1OTN9.Ib-V5c_NvrxptTipQEoM0950R4FFEz8JOm2AIvV0nZI', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:26:33,974 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:26:34,201 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001DF8A715B50>
+2025-09-26 18:26:36,486 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 18:26:36,488 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 18:26:50,645 - INFO - User Out program.
+2025-09-26 18:26:50,645 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 18:27:10,152 - INFO - Application started
+2025-09-26 18:27:12,452 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg2MDMyLCJleHAiOjE3NTg4ODk2MzJ9.M5DD01nKVOfd8EyCNTZgW3qQy6IDUFsCf5IuJM_Ulyw', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:27:12,452 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:27:12,720 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001AFF70CA090>
+2025-09-26 18:27:14,826 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 18:27:14,827 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 18:27:38,367 - INFO - User Out program.
+2025-09-26 18:27:38,367 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 18:28:28,582 - INFO - Application started
+2025-09-26 18:28:31,181 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg2MTExLCJleHAiOjE3NTg4ODk3MTF9.5OI5xKXUeXYYIOBA3URAgMQgkj3EUF2ojkx6jOXewY8', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:28:31,181 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:28:31,420 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001F82E509550>
+2025-09-26 18:28:33,797 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 18:28:33,799 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 18:28:35,035 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 18:28:35,037 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 18:28:52,519 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:-1 CONF:0.53
+2025-09-26 18:28:53,769 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:6 CONF:0.72
+2025-09-26 18:28:57,033 - INFO - User: {'id': 12} Matched detection from Camera 2 only.
+2025-09-26 18:28:57,084 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 2
+2025-09-26 18:28:57,084 - INFO - User: {'id': 12} detection from Camera 2 only. Data saved successfully
+2025-09-26 18:28:58,042 - INFO - User: {'id': 12} Matched detection from Camera 2 only.
+2025-09-26 18:28:58,092 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 2
+2025-09-26 18:28:58,092 - INFO - User: {'id': 12} detection from Camera 2 only. Data saved successfully
+2025-09-26 18:29:00,708 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:8 CONF:0.70
+2025-09-26 18:29:04,798 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:9 CONF:0.82
+2025-09-26 18:29:05,054 - INFO - User: {'id': 12} Matched detection from Camera 2 only.
+2025-09-26 18:29:05,100 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 2
+2025-09-26 18:29:05,100 - INFO - User: {'id': 12} detection from Camera 2 only. Data saved successfully
+2025-09-26 18:29:06,848 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:10 CONF:0.61
+2025-09-26 18:29:09,019 - INFO - User: {'id': 12} Matched detection from Camera 2 only.
+2025-09-26 18:29:09,067 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 2
+2025-09-26 18:29:09,067 - INFO - User: {'id': 12} detection from Camera 2 only. Data saved successfully
+2025-09-26 18:29:11,005 - INFO - User: {'id': 12} Matched detection from Camera 2 only.
+2025-09-26 18:29:11,050 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 2
+2025-09-26 18:29:11,050 - INFO - User: {'id': 12} detection from Camera 2 only. Data saved successfully
+2025-09-26 18:29:23,102 - INFO - User Out program.
+2025-09-26 18:29:23,102 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 18:30:50,012 - INFO - Application started
+2025-09-26 18:30:52,822 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg2MjUyLCJleHAiOjE3NTg4ODk4NTJ9.GIV5vZID0e2rFJSrNJ1OcBhec80Xdm_ISZQC1UgATmY', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:30:52,822 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:30:53,055 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001EF37B62750>
+2025-09-26 18:30:53,947 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 18:30:53,947 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 18:30:53,948 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 18:30:53,948 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 18:31:03,068 - INFO - User Out program.
+2025-09-26 18:31:03,068 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 18:31:29,075 - INFO - Application started
+2025-09-26 18:31:31,476 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg2MjkxLCJleHAiOjE3NTg4ODk4OTF9.9nXnzLnPIyidxS1FfLMRUZ1kU7DPS6Q4viUrqPXxOR0', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:31:31,476 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:31:31,711 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001C91BD083D0>
+2025-09-26 18:31:32,571 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 18:31:32,574 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 18:31:32,589 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 18:31:32,592 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 18:31:52,165 - INFO - User Out program.
+2025-09-26 18:31:52,167 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 18:33:50,628 - INFO - Application started
+2025-09-26 18:33:53,279 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg2NDMzLCJleHAiOjE3NTg4OTAwMzN9.8xbj7P3oT2SDjbi3Bcd9HMD-a2gdFQnL3HVXv8CwzNc', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:33:53,279 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:33:53,557 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001FC60D9B110>
+2025-09-26 18:33:55,250 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 18:33:56,496 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 18:33:56,505 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 18:33:56,506 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 18:34:29,365 - INFO - User Out program.
+2025-09-26 18:34:29,366 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 18:37:50,360 - INFO - Application started
+2025-09-26 18:37:53,311 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg2NjczLCJleHAiOjE3NTg4OTAyNzN9.u6eK2cEkCch_qQfpQIHLa8B-YRRlQPdknpZhumFOz1A', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:37:53,311 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:37:53,587 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000018069A4AB90>
+2025-09-26 18:37:55,212 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 18:37:56,454 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 18:37:56,457 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 18:37:56,459 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 18:39:03,542 - INFO - User Out program.
+2025-09-26 18:39:03,542 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 18:41:54,677 - INFO - Application started
+2025-09-26 18:41:57,760 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg2OTE3LCJleHAiOjE3NTg4OTA1MTd9.O3KHcxskaiXw848WbGC4sTAsKt_q8h_VQBBE7Eqrgy4', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:41:57,760 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:41:58,361 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000002880B16EB10>
+2025-09-26 18:41:59,708 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 18:42:00,950 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 18:42:00,955 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 18:42:00,958 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 18:42:26,963 - INFO - User Out program.
+2025-09-26 18:42:26,963 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 18:44:12,948 - INFO - Application started
+2025-09-26 18:44:16,504 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg3MDU2LCJleHAiOjE3NTg4OTA2NTZ9.OjtrAAOE-mYKEkkK4qyMvVRRyfIVxOjWo-tRaB_TcIM', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:44:16,505 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:44:19,328 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000002B3C1D2DE90>
+2025-09-26 18:44:19,981 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 18:44:19,987 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 18:44:19,987 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 18:44:19,989 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 18:44:55,661 - INFO - User Out program.
+2025-09-26 18:44:55,662 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 18:46:01,047 - INFO - Application started
+2025-09-26 18:46:03,458 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg3MTYzLCJleHAiOjE3NTg4OTA3NjN9.yFtbHbsTuPU2c1KRlnfId3vBAkQqPpnq1mUKHeTFbQU', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:46:03,460 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:46:03,749 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000014F53DD9890>
+2025-09-26 18:46:05,488 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 18:46:06,732 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 18:46:06,735 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 18:46:06,737 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 18:46:22,429 - INFO - User Out program.
+2025-09-26 18:46:22,429 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 18:47:33,719 - INFO - Application started
+2025-09-26 18:47:36,099 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg3MjU2LCJleHAiOjE3NTg4OTA4NTZ9.mR32Zz911vGWS2_K47lyKr7CXKmFAxjqmtfVh3e4iPo', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:47:36,099 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:47:36,387 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000262AC0F2C90>
+2025-09-26 18:47:38,111 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 18:47:39,352 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 18:47:39,354 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 18:47:39,357 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 18:48:08,333 - ERROR - User: {'id': 12} Failed to connect to Camera 1 False
+2025-09-26 18:48:38,201 - INFO - User Out program.
+2025-09-26 18:48:38,201 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 18:53:49,333 - INFO - Application started
+2025-09-26 18:53:51,647 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg3NjMxLCJleHAiOjE3NTg4OTEyMzF9.Id6cNUaucfv3QJ_sgBxzYBDMz8RZ-rgHWp7Ka5_fMSQ', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:53:51,647 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:53:51,885 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000020EA7DE1C50>
+2025-09-26 18:53:53,482 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 18:53:54,729 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 18:53:54,734 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 18:53:54,736 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 18:54:03,069 - INFO - User Out program.
+2025-09-26 18:54:03,069 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 18:54:27,992 - INFO - Application started
+2025-09-26 18:54:31,141 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg3NjcxLCJleHAiOjE3NTg4OTEyNzF9.TXJRB4w5juh9nXj32HaCWxVhaV5i1LtFVxWCVpztJCU', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:54:31,141 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:54:31,385 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000022F4338A750>
+2025-09-26 18:54:33,028 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 18:54:34,288 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 18:54:34,290 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 18:54:34,291 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 18:55:09,680 - INFO - User Out program.
+2025-09-26 18:55:09,680 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 18:58:47,553 - INFO - Application started
+2025-09-26 18:58:51,475 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg3OTMxLCJleHAiOjE3NTg4OTE1MzF9.42gcBQHgwVJme4l2ppLSJ5CS0miOIDZSgAk2qbjL2vw', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:58:51,475 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:58:51,825 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000021CC46FEC10>
+2025-09-26 18:58:53,579 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 18:58:54,828 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 18:58:54,832 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 18:58:54,834 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 18:59:17,534 - INFO - User Out program.
+2025-09-26 18:59:17,535 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 18:59:23,668 - INFO - Application started
+2025-09-26 18:59:26,145 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg3OTY2LCJleHAiOjE3NTg4OTE1NjZ9.EXFzEtJ-krcc5WLsMuvmGvu4H0QYyo0KlckKkSx16oM', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 18:59:26,145 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 18:59:26,423 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000216E8152810>
+2025-09-26 18:59:28,105 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 18:59:29,355 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 18:59:29,358 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 18:59:29,359 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 18:59:47,976 - INFO - User Out program.
+2025-09-26 18:59:47,976 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 19:03:03,084 - INFO - Application started
+2025-09-26 19:03:07,608 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg4MTg3LCJleHAiOjE3NTg4OTE3ODd9.koehTa1IZUBQN0hRFjn_kWDcGhIVf_aM2dFN5chKj7k', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 19:03:07,608 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 19:03:07,852 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000021F65B92750>
+2025-09-26 19:03:09,482 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 19:03:10,761 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 19:03:10,762 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 19:03:10,765 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 19:03:41,880 - INFO - User Out program.
+2025-09-26 19:03:41,880 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 19:07:25,458 - INFO - Application started
+2025-09-26 19:07:28,310 - ERROR - Login fail ❌: {"success":false,"message":"Incorrect password"}
+2025-09-26 19:07:28,311 - INFO - Login failed for user: panitan.thainlek@gmail.com
+2025-09-26 19:07:31,812 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg4NDUxLCJleHAiOjE3NTg4OTIwNTF9.DkmqzoBZpcGchzs_1yttjQlsNk__FjMo_dEYnNP1GnA', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 19:07:31,812 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 19:07:32,013 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000174D2982750>
+2025-09-26 19:07:33,642 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 19:07:34,895 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 19:07:34,897 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 19:07:34,899 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 19:08:06,467 - INFO - User Out program.
+2025-09-26 19:08:06,467 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 19:11:40,467 - INFO - Application started
+2025-09-26 19:11:52,315 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg4NzEyLCJleHAiOjE3NTg4OTIzMTJ9.kRrsmvLCrntFUpN4RaJavfeFkeh5dWjMhK529N4iRPw', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 19:11:52,315 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 19:11:52,639 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000235F49E2750>
+2025-09-26 19:11:54,317 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 19:11:55,572 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 19:11:55,575 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 19:11:55,577 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 19:12:23,398 - INFO - User Out program.
+2025-09-26 19:12:23,398 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 19:22:24,727 - INFO - Application started
+2025-09-26 19:22:28,375 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg5MzQ4LCJleHAiOjE3NTg4OTI5NDh9.eMeE1s4h5CXjrR8prdsI2ymBCWb8_B9W3HHACKC2vm4', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 19:22:28,375 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 19:22:28,634 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001E24284A890>
+2025-09-26 19:22:30,286 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 19:22:31,545 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 19:22:31,548 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 19:22:31,550 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 19:23:55,999 - INFO - User Out program.
+2025-09-26 19:23:55,999 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 19:26:14,894 - INFO - Application started
+2025-09-26 19:26:29,785 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODg5NTg5LCJleHAiOjE3NTg4OTMxODl9.gIk-AQf8QokeKfx8SL2VbJcFSOtHwczPQcxX3Z4Zq64', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 19:26:29,786 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 19:26:30,036 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000255A198AB50>
+2025-09-26 19:26:31,732 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 19:26:32,991 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 19:26:32,996 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 19:26:32,999 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 19:27:57,791 - INFO - User Out program.
+2025-09-26 19:27:57,791 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 20:21:41,176 - INFO - Application started
+2025-09-26 20:21:43,663 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODkyOTAzLCJleHAiOjE3NTg4OTY1MDN9.3NOTpYQ8JwX-AsO2ut2rheLb1Vus1Cbw53uMk1XPMgM', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 20:21:43,664 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 20:21:43,971 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001AF6495B1D0>
+2025-09-26 20:21:45,783 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 20:21:47,014 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 20:22:16,126 - INFO - User Out program.
+2025-09-26 20:22:16,126 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 20:29:11,943 - INFO - Application started
+2025-09-26 20:29:14,924 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODkzMzU0LCJleHAiOjE3NTg4OTY5NTR9.RxrWr3tWu_NJUgSzx8eG_LV1iJvUxsOIUVs8Tjn7t-8', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 20:29:14,924 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 20:29:15,159 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001DD65A16C90>
+2025-09-26 20:29:16,840 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 20:29:18,066 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 20:29:18,069 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 20:29:18,071 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 20:30:00,478 - INFO - User Out program.
+2025-09-26 20:30:00,478 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 20:32:39,171 - INFO - Application started
+2025-09-26 20:32:42,901 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODkzNTYyLCJleHAiOjE3NTg4OTcxNjJ9.XXt-3kb6wtPGf9L_Jt3mKXOJ140dTn2tmmK-4hNGOTI', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 20:32:42,901 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 20:32:43,174 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001D62694ED10>
+2025-09-26 20:32:44,836 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 20:32:46,067 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 20:32:46,069 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 20:32:46,072 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 20:33:01,691 - INFO - User Out program.
+2025-09-26 20:33:01,691 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 20:33:44,250 - INFO - Application started
+2025-09-26 20:33:46,777 - INFO - User Out program.
+2025-09-26 20:33:46,777 - INFO - No user is currently logged in.
+2025-09-26 20:33:52,211 - INFO - Application started
+2025-09-26 20:33:56,695 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODkzNjM2LCJleHAiOjE3NTg4OTcyMzZ9.1VnbvR8UNTlnXPuire1Yes13l8Vb3QoTNgIicN765TM', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 20:33:56,695 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 20:33:56,951 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000022EBF2E95D0>
+2025-09-26 20:33:59,865 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 20:33:59,867 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 20:34:10,121 - INFO - User Out program.
+2025-09-26 20:34:10,121 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 20:36:35,262 - INFO - Application started
+2025-09-26 20:36:38,405 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODkzNzk4LCJleHAiOjE3NTg4OTczOTh9.RCgmE0-G9kKDihbi1RVRoNpgAAA8BSBDJprJhDumOWY', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 20:36:38,406 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 20:36:38,692 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000018FAE3CAF90>
+2025-09-26 20:36:40,373 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 20:36:41,652 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 20:36:47,788 - INFO - User Out program.
+2025-09-26 20:36:47,788 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 20:37:50,504 - INFO - Application started
+2025-09-26 20:37:53,813 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODkzODczLCJleHAiOjE3NTg4OTc0NzN9.AbGdShNjQoXcLvuEv1HFGRdoLqy0PUM8mEvEJ91viD0', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 20:37:53,813 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 20:37:54,084 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000002A368CCA750>
+2025-09-26 20:37:56,932 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 20:37:56,934 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 20:38:08,907 - INFO - User Out program.
+2025-09-26 20:38:08,908 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 20:41:05,760 - INFO - Application started
+2025-09-26 20:41:08,492 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODk0MDY4LCJleHAiOjE3NTg4OTc2Njh9.R6RJ8HNwWcnP5Qmvy6Sgl1S9grOgw1hpKTl67KL93O0', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 20:41:08,492 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 20:41:08,719 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001FDEB434B90>
+2025-09-26 20:41:10,321 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 20:41:11,563 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 20:41:11,563 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 20:41:11,565 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 20:42:41,290 - INFO - User Out program.
+2025-09-26 20:42:41,290 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 20:43:52,665 - INFO - Application started
+2025-09-26 20:43:55,621 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODk0MjM1LCJleHAiOjE3NTg4OTc4MzV9.fLWcYJLJ1zzCnnTNRNA59KTLRXAdg-yD4yTIsPT4u_g', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 20:43:55,621 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 20:43:55,942 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001EBA5645110>
+2025-09-26 20:43:57,610 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 20:43:58,859 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 20:43:58,859 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 20:43:58,866 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 20:44:07,330 - INFO - User Out program.
+2025-09-26 20:44:07,330 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 20:44:37,253 - INFO - Application started
+2025-09-26 20:44:40,394 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODk0MjgwLCJleHAiOjE3NTg4OTc4ODB9.s5r7nI3TK4lBbG6Kl1yc0geZgqgai2kdJVstnKEswPk', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 20:44:40,395 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 20:44:40,632 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000254085AA750>
+2025-09-26 20:44:42,217 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 20:44:43,463 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 20:44:43,463 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 20:44:43,464 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 20:44:56,250 - INFO - User Out program.
+2025-09-26 20:44:56,250 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 20:46:56,954 - INFO - Application started
+2025-09-26 20:47:00,229 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODk0NDIwLCJleHAiOjE3NTg4OTgwMjB9.EbsbsdU-iQbgGyAvFLxOVMdqdHqeugIed60h0e94FOc', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 20:47:00,229 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 20:47:00,497 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000188B7D96F50>
+2025-09-26 20:47:02,128 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 20:47:03,372 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 20:47:03,373 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 20:47:03,376 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 20:47:13,345 - INFO - User Out program.
+2025-09-26 20:47:13,345 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-26 21:12:39,445 - INFO - Application started
+2025-09-26 21:12:42,838 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4ODk1OTYyLCJleHAiOjE3NTg4OTk1NjJ9.sqhTRRjT1NVbplCnT5ShP1oqM3CsAn1VTVGet2fe3LA', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-26 21:12:42,839 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-26 21:12:43,138 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000018A49215190>
+2025-09-26 21:12:44,907 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-26 21:12:46,141 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-26 21:12:46,146 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-26 21:12:46,147 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-26 21:13:06,113 - INFO - User Out program.
+2025-09-26 21:13:06,113 - INFO - Logout user: panitan.thainlek@gmail.com
