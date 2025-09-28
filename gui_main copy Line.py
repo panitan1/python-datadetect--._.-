@@ -22,6 +22,7 @@ import json
 from queue import Queue
 from collections import deque
 import supervision as sv
+from supervision import Position
 # --- Performance toggles (ADD) ---
 cv2.setUseOptimized(True)
 cv2.setNumThreads(1)  # กัน CPU thread แย่งกันเกินไป
@@ -123,14 +124,36 @@ class APP_SY_Frame(ctk.CTkFrame):
         
         self.line1 = sv.LineZone(
             start=sv.Point(163, 679), 
-            end=sv.Point(1672, 191)
+            end=sv.Point(1672, 191),
+            triggering_anchors=[
+            # Position.TOP_LEFT,
+            # Position.TOP_RIGHT,
+            # Position.BOTTOM_LEFT,
+            # Position.BOTTOM_RIGHT,
+            Position.CENTER,
+            # Position.TOP_CENTER,
+            # Position.BOTTOM_CENTER,
+            # Position.CENTER_LEFT,
+            # Position.CENTER_RIGHT,
+    ], 
         )
         self.line_annotator1 = sv.LineZoneAnnotator(thickness=2, text_thickness=1, text_scale=0.5
                                                     ,display_in_count = False , display_out_count= False)
         
         self.line2 = sv.LineZone(
             start=sv.Point(1695, 863), 
-            end=sv.Point(416, 325)
+            end=sv.Point(416, 325),
+            triggering_anchors=[
+        # Position.TOP_LEFT,
+        # Position.TOP_RIGHT,
+        # Position.BOTTOM_LEFT,
+        # Position.BOTTOM_RIGHT,
+        Position.CENTER,
+        # Position.TOP_CENTER,
+        # Position.BOTTOM_CENTER,
+        # Position.CENTER_LEFT,
+        # Position.CENTER_RIGHT,
+    ], 
         )
         self.line_annotator2 = sv.LineZoneAnnotator(thickness=2, text_thickness=1, text_scale=0.5
                                                     ,display_in_count = False , display_out_count= False)
@@ -268,7 +291,7 @@ class APP_SY_Frame(ctk.CTkFrame):
         self.My_cap1()
         self.model = YOLO("best2.pt").to(0)  # << ใช้โมเดลของกล้อง1 ตามเดิม
 
-        self.cam01 = cv2.VideoCapture("vidio\\X1_D3.mp4")
+        self.cam01 = cv2.VideoCapture("rtsp://admin:Demaxzzo001@192.168.1.133:554/cam/realmonitor?channel=1&subtype=0")
         self.cam01.set(cv2.CAP_PROP_BUFFERSIZE, 1)
         reader1 = FileReader(self.cam01)
 
@@ -305,7 +328,8 @@ class APP_SY_Frame(ctk.CTkFrame):
 
             # เขียนไฟล์วิดีโอต้นฉบับ (BGR)
             self.out1.write(frame1)
-
+            frame1cap = cv2.cvtColor(frame1, cv2.COLOR_BGR2RGB)
+            self.last_frame_cam1 = frame1cap
             # === ตรวจจับ/ติดตาม เหมือน Cam02 ===
             results_list = self.model.track(
                 frame1,
@@ -396,7 +420,7 @@ class APP_SY_Frame(ctk.CTkFrame):
                                     self.after(5000, self.clear_image_after_delay)
                                 except:
                                     pass
-
+                                       
             # อัปเดตภาพลง GUI (BGR -> RGB) เหมือน Cam02
             try:
                 img_rgb = cv2.cvtColor(frame1, cv2.COLOR_BGR2RGB)
@@ -416,7 +440,7 @@ class APP_SY_Frame(ctk.CTkFrame):
         self.model22 = YOLO("best.pt").to(0)
 
         self.cam02 = cv2.VideoCapture(
-            "vidio\X2_D.mp4"
+            "rtsp://admin:Demaxzzo001@192.168.1.134:554/cam/realmonitor?channel=1&subtype=0"
         )
         
         self.cam02.set(cv2.CAP_PROP_BUFFERSIZE, 1)
@@ -450,11 +474,13 @@ class APP_SY_Frame(ctk.CTkFrame):
                 break
 
             self.out2.write(frame2)
-
+            
             results_list = self.model22.track(frame2, classes=[0,1], persist=True, device="cuda", imgsz=640)
             annotated_frame1 = results_list[0]
 
             original_frame_bgr = frame2.copy()
+            frame2cap = cv2.cvtColor(frame2, cv2.COLOR_BGR2RGB)
+            self.last_frame_cam2 = frame2cap
             annotator = Annotator(frame2)
 
             self.Tz = pytz.timezone('Asia/Bangkok')
