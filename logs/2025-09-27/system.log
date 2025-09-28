@@ -453,3 +453,944 @@
 2025-09-27 12:45:53,086 - INFO - User: {'id': 12} detection from Camera 2 only. Data saved successfully
 2025-09-27 12:46:02,559 - INFO - User Out program.
 2025-09-27 12:46:02,560 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 21:12:04,545 - INFO - Application started
+2025-09-27 21:12:07,567 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTgyMzI3LCJleHAiOjE3NTg5ODU5Mjd9.V670JC0nWczjWVvZOkWS6PUgUMEJP_WV7O9VnwxtAOE', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 21:12:07,567 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 21:12:07,989 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000278DD08D190>
+2025-09-27 21:12:39,121 - ERROR - User: {'id': 12} Failed to open Camera 01.
+2025-09-27 21:12:39,925 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 21:12:39,942 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 21:12:53,062 - INFO - User Out program.
+2025-09-27 21:12:53,062 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 21:13:06,404 - INFO - Application started
+2025-09-27 21:13:10,708 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTgyMzkwLCJleHAiOjE3NTg5ODU5OTB9.JcVsThcgtYl8Xj7XUTOaALNwEi5tuvWbTqNb1PKZhho', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 21:13:10,708 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 21:13:10,998 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000011DCAFB5690>
+2025-09-27 21:13:12,784 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 21:13:14,047 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 21:13:14,048 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 21:13:14,050 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 21:13:17,039 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:2 CONF:0.58
+2025-09-27 21:13:17,043 - INFO - User: {'id': 12} Matched detection from Camera 2 only.
+2025-09-27 21:13:17,119 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 2
+2025-09-27 21:13:17,119 - INFO - User: {'id': 12} detection from Camera 2 only. Data saved successfully
+2025-09-27 21:13:19,939 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:3 CONF:0.61
+2025-09-27 21:13:19,939 - INFO - User: {'id': 12} Matched detection from Camera 2 only.
+2025-09-27 21:13:19,962 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 2
+2025-09-27 21:13:19,962 - INFO - User: {'id': 12} detection from Camera 2 only. Data saved successfully
+2025-09-27 21:13:25,250 - INFO - User Out program.
+2025-09-27 21:13:25,250 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 21:14:02,654 - INFO - Application started
+2025-09-27 21:14:11,405 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTgyNDUxLCJleHAiOjE3NTg5ODYwNTF9.KwbIP_R4TSK2Q7VZhsjC0AOAuiYgbM_Lz3t7oT_rdRs', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 21:14:11,405 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 21:14:11,765 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000026B52EF6210>
+2025-09-27 21:14:13,583 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 21:14:15,056 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 21:14:15,057 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 21:14:15,059 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 21:14:21,745 - INFO - User Out program.
+2025-09-27 21:14:21,745 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 21:14:42,118 - INFO - Application started
+2025-09-27 21:14:45,109 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTgyNDg1LCJleHAiOjE3NTg5ODYwODV9.6gmxkxeL6GQ5bi-3Ej7ckP3yHLpJlEq6B2XlVfRCJMc', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 21:14:45,109 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 21:14:45,445 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000020472EFDB10>
+2025-09-27 21:14:47,142 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 21:14:48,413 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 21:14:48,414 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 21:14:48,417 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 21:15:06,824 - INFO - User Out program.
+2025-09-27 21:15:06,824 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 21:16:51,995 - INFO - Application started
+2025-09-27 21:16:55,206 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTgyNjE1LCJleHAiOjE3NTg5ODYyMTV9.J4i7V8tO_HyFkVWKmvn5F8vRfdRGNlKiU0BtgD3_vqw', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 21:16:55,206 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 21:16:55,517 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000174585AE710>
+2025-09-27 21:16:57,246 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 21:16:58,502 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 21:16:58,504 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 21:16:58,508 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 21:17:02,399 - INFO - User Out program.
+2025-09-27 21:17:02,399 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 21:19:15,717 - INFO - Application started
+2025-09-27 21:19:18,282 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTgyNzU4LCJleHAiOjE3NTg5ODYzNTh9.8DRDPuVpFIQLhvIpCgWAGokM3GxCQIqI8L27X-3uAAY', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 21:19:18,282 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 21:19:18,561 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000022F504E0B10>
+2025-09-27 21:19:20,239 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 21:19:21,468 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 21:19:21,469 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 21:19:21,471 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 21:19:37,449 - INFO - User Out program.
+2025-09-27 21:19:37,449 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 21:22:21,758 - INFO - Application started
+2025-09-27 21:22:24,508 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTgyOTQ0LCJleHAiOjE3NTg5ODY1NDR9.zb2WwfmT0mN3FAfIy_SA4cl076ctxsAYALSZqF8GgU4', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 21:22:24,508 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 21:22:24,770 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000229BA677010>
+2025-09-27 21:22:26,423 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 21:22:27,657 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 21:22:27,660 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 21:22:27,665 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 21:22:36,573 - INFO - User Out program.
+2025-09-27 21:22:36,573 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 21:23:09,066 - INFO - Application started
+2025-09-27 21:23:17,346 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTgyOTk3LCJleHAiOjE3NTg5ODY1OTd9.lQMXrvPflSHmcjfrqDKKoggbH2xBf70MvBIatdik7kY', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 21:23:17,346 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 21:23:17,605 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001B882EA55D0>
+2025-09-27 21:23:18,041 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 21:23:18,057 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 21:23:18,058 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 21:23:18,060 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 21:23:23,279 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:1 CONF:0.80
+2025-09-27 21:23:26,882 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:2 CONF:0.64
+2025-09-27 21:23:26,882 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 21:23:26,917 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 21:23:26,931 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 21:23:26,938 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 21:23:27,068 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:3 CONF:0.74
+2025-09-27 21:23:28,358 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:4 CONF:0.80
+2025-09-27 21:23:28,358 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 21:23:28,361 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 21:23:28,363 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 21:23:28,366 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 21:23:31,457 - INFO - User Out program.
+2025-09-27 21:23:31,457 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 21:24:09,737 - INFO - Application started
+2025-09-27 21:24:16,324 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTgzMDU2LCJleHAiOjE3NTg5ODY2NTZ9.WGSxdmAqOtki5PKfANg_SLOTiHnkbCkC9rUP41qw6-I', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 21:24:16,324 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 21:24:16,624 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000020876E4E550>
+2025-09-27 21:24:17,056 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 21:24:17,072 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 21:24:17,073 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 21:24:17,075 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 21:24:22,128 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:1 CONF:0.80
+2025-09-27 21:24:25,676 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:2 CONF:0.64
+2025-09-27 21:24:25,676 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 21:24:25,704 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 21:24:25,720 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 21:24:25,724 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 21:24:25,727 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:3 CONF:0.74
+2025-09-27 21:24:26,982 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:4 CONF:0.80
+2025-09-27 21:24:26,983 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 21:24:26,987 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 21:24:26,989 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 21:24:26,992 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 21:24:31,901 - INFO - User Out program.
+2025-09-27 21:24:31,901 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 21:58:16,334 - INFO - Application started
+2025-09-27 21:58:19,243 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg1MDk5LCJleHAiOjE3NTg5ODg2OTl9.qzICAzzTl3cHAuJ92AFYTVENuvRXmIEHzGb06ZLo4_I', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 21:58:19,244 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 21:58:19,574 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001D30963B750>
+2025-09-27 21:58:20,195 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 21:58:20,212 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 21:58:20,219 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 21:58:20,220 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 21:58:27,247 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:1 CONF:0.80
+2025-09-27 21:58:31,154 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:3 CONF:0.74
+2025-09-27 21:58:32,038 - INFO - User: {'id': 12} Matched detection from Camera 2 only.
+2025-09-27 21:58:32,062 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 2
+2025-09-27 21:58:32,062 - INFO - User: {'id': 12} detection from Camera 2 only. Data saved successfully
+2025-09-27 21:58:34,415 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:2 CONF:0.91
+2025-09-27 21:58:34,415 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 21:58:34,427 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 21:58:34,429 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 21:58:34,433 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 21:58:34,444 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:4 CONF:0.92
+2025-09-27 21:58:36,568 - INFO - User Out program.
+2025-09-27 21:58:36,568 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 21:59:25,357 - INFO - Application started
+2025-09-27 21:59:28,021 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg1MTY4LCJleHAiOjE3NTg5ODg3Njh9.JpD0xVHUyoyf_zjONOVoa7p_VDeppUOQuYTAg0c7Iu4', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 21:59:28,022 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 21:59:28,364 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000202B9AEE190>
+2025-09-27 21:59:28,842 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 21:59:28,858 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 21:59:28,861 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 21:59:28,862 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 21:59:39,890 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:1 CONF:0.93
+2025-09-27 21:59:39,906 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:2 CONF:0.91
+2025-09-27 21:59:41,628 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:3 CONF:0.91
+2025-09-27 21:59:41,628 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 21:59:41,639 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 21:59:41,649 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 21:59:41,652 - INFO - User: {'id': 12} Save C2_Model1_1.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 21:59:41,657 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 21:59:41,667 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:4 CONF:0.92
+2025-09-27 21:59:46,067 - INFO - Matched detection from Camera 1 only.
+2025-09-27 21:59:46,069 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 
+2025-09-27 21:59:46,070 - INFO - User: {'id': 12} detection from Camera 1 only. Data saved successfully
+2025-09-27 21:59:46,648 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-27 21:59:48,616 - INFO - User Out program.
+2025-09-27 21:59:48,616 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 22:00:55,216 - INFO - Application started
+2025-09-27 22:00:57,879 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg1MjU3LCJleHAiOjE3NTg5ODg4NTd9.Ahm1VdC7t-qGg_AiDSucpA6QlXDiAK-Uhh9XbEb8WYU', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 22:00:57,879 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 22:00:58,164 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000273B35F4B50>
+2025-09-27 22:00:58,580 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 22:00:58,584 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 22:00:58,599 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 22:00:58,603 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 22:01:09,277 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:1 CONF:0.92
+2025-09-27 22:01:09,293 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:3 CONF:0.91
+2025-09-27 22:01:11,227 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:4 CONF:0.91
+2025-09-27 22:01:11,228 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 22:01:11,240 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:01:11,249 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:01:11,251 - INFO - User: {'id': 12} Save C2_Model1_1.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:01:11,260 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 22:01:11,272 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 22:01:16,017 - INFO - Matched detection from Camera 1 only.
+2025-09-27 22:01:16,019 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 
+2025-09-27 22:01:16,020 - INFO - User: {'id': 12} detection from Camera 1 only. Data saved successfully
+2025-09-27 22:01:28,347 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:6 CONF:0.92
+2025-09-27 22:01:28,363 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:8 CONF:0.91
+2025-09-27 22:01:33,037 - INFO - User: {'id': 12} Matched detection from Camera 2 only.
+2025-09-27 22:01:33,047 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 2
+2025-09-27 22:01:33,047 - INFO - User: {'id': 12} detection from Camera 2 only. Data saved successfully
+2025-09-27 22:01:33,140 - INFO - User: {'id': 12} Matched detection from Camera 2 only.
+2025-09-27 22:01:33,142 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 2
+2025-09-27 22:01:33,142 - INFO - User: {'id': 12} detection from Camera 2 only. Data saved successfully
+2025-09-27 22:01:34,284 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:9 CONF:0.91
+2025-09-27 22:01:34,294 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:10 CONF:0.92
+2025-09-27 22:01:38,795 - INFO - User Out program.
+2025-09-27 22:01:38,795 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 22:01:56,210 - INFO - Application started
+2025-09-27 22:01:58,924 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg1MzE4LCJleHAiOjE3NTg5ODg5MTh9.LbW03i0inInyhRPZdaBOM85MNgLXKCJbbxhH5ZRqXxE', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 22:01:58,924 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 22:01:59,230 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001402E21DB50>
+2025-09-27 22:01:59,699 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 22:01:59,703 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 22:01:59,715 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 22:01:59,718 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 22:02:10,634 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:1 CONF:0.92
+2025-09-27 22:02:10,664 - INFO - User Out program.
+2025-09-27 22:02:10,664 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 22:09:51,670 - INFO - Application started
+2025-09-27 22:09:54,342 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg1Nzk0LCJleHAiOjE3NTg5ODkzOTR9.0uZWTwudAs83HOMsU-TWjNn8b7wms1DnWuSs2SIQzVk', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 22:09:54,342 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 22:09:54,653 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000002B34339B750>
+2025-09-27 22:09:55,145 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 22:09:55,147 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 22:09:55,161 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 22:09:55,164 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 22:10:06,995 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:1 CONF:0.92
+2025-09-27 22:10:07,008 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:3 CONF:0.91
+2025-09-27 22:10:08,831 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:4 CONF:0.91
+2025-09-27 22:10:08,831 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 22:10:08,846 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:10:08,856 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:10:08,858 - INFO - User: {'id': 12} Save C2_Model1_1.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:10:08,862 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 22:10:08,875 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 22:10:13,004 - INFO - Matched detection from Camera 1 only.
+2025-09-27 22:10:13,007 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 
+2025-09-27 22:10:13,007 - INFO - User: {'id': 12} detection from Camera 1 only. Data saved successfully
+2025-09-27 22:10:27,794 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:6 CONF:0.92
+2025-09-27 22:10:27,806 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:8 CONF:0.91
+2025-09-27 22:10:32,024 - INFO - User: {'id': 12} Matched detection from Camera 2 only.
+2025-09-27 22:10:32,034 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 2
+2025-09-27 22:10:32,034 - INFO - User: {'id': 12} detection from Camera 2 only. Data saved successfully
+2025-09-27 22:10:32,136 - INFO - User: {'id': 12} Matched detection from Camera 2 only.
+2025-09-27 22:10:32,137 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 2
+2025-09-27 22:10:32,137 - INFO - User: {'id': 12} detection from Camera 2 only. Data saved successfully
+2025-09-27 22:10:33,410 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:9 CONF:0.91
+2025-09-27 22:10:33,419 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:10 CONF:0.92
+2025-09-27 22:10:38,092 - INFO - Matched detection from Camera 1 only.
+2025-09-27 22:10:38,111 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 
+2025-09-27 22:10:38,111 - INFO - User: {'id': 12} detection from Camera 1 only. Data saved successfully
+2025-09-27 22:10:38,148 - INFO - Matched detection from Camera 1 only.
+2025-09-27 22:10:38,151 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 
+2025-09-27 22:10:38,151 - INFO - User: {'id': 12} detection from Camera 1 only. Data saved successfully
+2025-09-27 22:10:43,846 - INFO - User Out program.
+2025-09-27 22:10:43,846 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 22:16:47,549 - INFO - Application started
+2025-09-27 22:16:50,224 - ERROR - Login fail ❌: {"success":false,"message":"Incorrect password"}
+2025-09-27 22:16:50,224 - INFO - Login failed for user: panitan.thainlek@gmail.com
+2025-09-27 22:16:53,098 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg2MjEzLCJleHAiOjE3NTg5ODk4MTN9.AZvMSb3IRONHJVwhKtTj06b4lOhYWNiwQ8BVXl4oEoM', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 22:16:53,098 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 22:16:53,305 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000018B470E9950>
+2025-09-27 22:16:53,773 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 22:16:53,777 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 22:16:53,794 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 22:16:53,799 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 22:17:05,124 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:1 CONF:0.92
+2025-09-27 22:17:06,359 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:3 CONF:0.91
+2025-09-27 22:17:06,360 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 22:17:06,379 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:17:06,389 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:17:06,392 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 22:17:06,403 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 22:17:07,659 - INFO - User Out program.
+2025-09-27 22:17:07,659 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 22:18:36,210 - INFO - Application started
+2025-09-27 22:18:39,459 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg2MzE5LCJleHAiOjE3NTg5ODk5MTl9.K1PFEQqkLQRPR6eKgJlB0N-7_ZGuRFtb-G5L1lZgvrw', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 22:18:39,461 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 22:18:39,747 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000002437821BFD0>
+2025-09-27 22:18:40,167 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 22:18:40,180 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 22:18:40,184 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 22:18:40,186 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 22:18:51,260 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:1 CONF:0.92
+2025-09-27 22:18:52,466 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:3 CONF:0.91
+2025-09-27 22:18:52,466 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 22:18:52,486 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:18:52,496 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:18:52,502 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 22:18:52,514 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 22:18:53,546 - INFO - User Out program.
+2025-09-27 22:18:53,547 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 22:23:06,965 - INFO - Application started
+2025-09-27 22:23:11,199 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg2NTkxLCJleHAiOjE3NTg5OTAxOTF9.L7Uun74327a5thGlgyJzWf38S7yFggyLSV6LAQL1sAw', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 22:23:11,199 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 22:23:11,501 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000018DAAAE5CD0>
+2025-09-27 22:23:11,886 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 22:23:11,890 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 22:23:11,905 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 22:23:11,908 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 22:23:22,952 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:1 CONF:0.92
+2025-09-27 22:23:24,289 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:4 CONF:0.91
+2025-09-27 22:23:24,289 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 22:23:24,301 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:23:24,311 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:23:24,313 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 22:23:24,322 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 22:23:26,044 - INFO - User Out program.
+2025-09-27 22:23:26,044 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 22:25:48,348 - INFO - Application started
+2025-09-27 22:25:51,192 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg2NzUxLCJleHAiOjE3NTg5OTAzNTF9.H4I5kMbHq9AMIQnqJa-ryUQSewk-lC3Srcghdf7N-Do', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 22:25:51,193 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 22:25:51,440 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001F645F5E190>
+2025-09-27 22:25:51,878 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 22:25:51,882 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 22:25:51,900 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 22:25:51,903 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 22:26:02,064 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:1 CONF:0.92
+2025-09-27 22:26:02,078 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:3 CONF:0.91
+2025-09-27 22:26:03,876 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:4 CONF:0.91
+2025-09-27 22:26:03,877 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 22:26:03,887 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:26:03,899 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:26:03,907 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 22:26:03,920 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 22:26:07,512 - INFO - User Out program.
+2025-09-27 22:26:07,513 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 22:26:38,386 - INFO - Application started
+2025-09-27 22:26:40,810 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg2ODAwLCJleHAiOjE3NTg5OTA0MDB9.h_Hbyr3BoEA-UepkFOAkxoacJgEaOdarhQ1FfB3d6V8', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 22:26:40,810 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 22:26:41,095 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000251A289C6D0>
+2025-09-27 22:26:41,594 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 22:26:41,598 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 22:26:41,611 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 22:26:41,616 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 22:26:52,650 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:1 CONF:0.92
+2025-09-27 22:26:52,669 - INFO - User: {'id': 12} Motorcycle detected on Camera 2 ID:4 CONF:0.91
+2025-09-27 22:26:54,276 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:3 CONF:0.91
+2025-09-27 22:26:54,277 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 22:26:54,288 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:26:54,297 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:26:54,303 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 22:26:54,313 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 22:26:58,156 - INFO - User Out program.
+2025-09-27 22:26:58,156 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 22:29:47,568 - INFO - Application started
+2025-09-27 22:29:50,225 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg2OTkwLCJleHAiOjE3NTg5OTA1OTB9.4yZJpcq2IJuMXK_FWL7OeQx6V33bxtGSnjDQ8oIoLmo', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 22:29:50,225 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 22:29:50,514 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001794A6FD110>
+2025-09-27 22:29:50,975 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 22:29:50,978 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 22:29:50,999 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 22:29:51,002 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 22:29:55,416 - INFO - User Out program.
+2025-09-27 22:29:55,417 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 22:30:22,252 - INFO - Application started
+2025-09-27 22:30:24,796 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg3MDI0LCJleHAiOjE3NTg5OTA2MjR9.z_D3XtH0lcc53bwbpaE4-WGV9K3r4K2r8CGOWo0s7-4', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 22:30:24,796 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 22:30:25,134 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000235002B8DD0>
+2025-09-27 22:30:25,603 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 22:30:25,605 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 22:30:25,622 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 22:30:25,625 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 22:30:29,008 - INFO - User Out program.
+2025-09-27 22:30:29,008 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 22:34:23,054 - INFO - Application started
+2025-09-27 22:34:25,707 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg3MjY1LCJleHAiOjE3NTg5OTA4NjV9.n_eFXLe8-uV2Oc8b3bayS-MAAfKxZHVGm8BxrCqxLQM', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 22:34:25,707 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 22:34:25,974 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000019B6A0C8D10>
+2025-09-27 22:34:26,433 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 22:34:26,443 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 22:34:26,445 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 22:34:26,446 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 22:34:29,353 - INFO - User Out program.
+2025-09-27 22:34:29,353 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 22:36:35,770 - INFO - Application started
+2025-09-27 22:36:38,154 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg3Mzk4LCJleHAiOjE3NTg5OTA5OTh9.oWbooT2IA18mLgB6lxKaxZp6rYBHj4GDOFrOVA_y1Lk', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 22:36:38,154 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 22:36:38,404 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000002119E6BF510>
+2025-09-27 22:36:38,893 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 22:36:38,905 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 22:36:38,908 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 22:36:38,909 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 22:36:51,498 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:3 CONF:0.91
+2025-09-27 22:36:51,499 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 22:36:51,522 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:36:51,533 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:36:51,537 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 22:36:51,548 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 22:37:13,336 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:9 CONF:0.91
+2025-09-27 22:37:13,336 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 22:37:13,348 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:37:13,357 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:37:13,360 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 22:37:13,371 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:10 CONF:0.92
+2025-09-27 22:37:17,723 - INFO - User Out program.
+2025-09-27 22:37:17,723 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 22:40:22,294 - INFO - Application started
+2025-09-27 22:40:25,305 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg3NjI1LCJleHAiOjE3NTg5OTEyMjV9.fI-sxhVNT2MgnbLoTpVKN0kvVsa_qLVUjKZbPH0RXC4', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 22:40:25,305 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 22:40:25,594 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001652CF46A10>
+2025-09-27 22:40:26,056 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 22:40:26,060 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 22:40:26,074 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 22:40:26,078 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 22:40:39,150 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:3 CONF:0.91
+2025-09-27 22:40:39,151 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 22:40:39,162 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:40:39,174 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:40:39,175 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:40:39,186 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 22:40:39,205 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 22:40:59,297 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:9 CONF:0.91
+2025-09-27 22:40:59,297 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 22:40:59,310 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:40:59,320 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:40:59,321 - INFO - User: {'id': 12} Save C1_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:40:59,322 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:40:59,328 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 22:40:59,341 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:10 CONF:0.92
+2025-09-27 22:41:17,072 - INFO - User: {'id': 12} Matched detection from Camera 2 only.
+2025-09-27 22:41:17,084 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 2
+2025-09-27 22:41:17,085 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 2
+2025-09-27 22:41:17,086 - INFO - User: {'id': 12} detection from Camera 2 only. Data saved successfully
+2025-09-27 22:41:19,540 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:14 CONF:0.91
+2025-09-27 22:41:19,549 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:15 CONF:0.92
+2025-09-27 22:41:24,037 - INFO - Matched detection from Camera 1 only.
+2025-09-27 22:41:24,050 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 
+2025-09-27 22:41:24,052 - INFO - User: {'id': 12} Save C1_Model2_0.png from Matched detection from Camera 1 
+2025-09-27 22:41:24,054 - INFO - User: {'id': 12} Save C1_Model2_0.png from Matched detection from Camera 1 
+2025-09-27 22:41:24,054 - INFO - User: {'id': 12} detection from Camera 1 only. Data saved successfully
+2025-09-27 22:41:24,790 - INFO - User Out program.
+2025-09-27 22:41:24,790 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 22:43:21,174 - INFO - Application started
+2025-09-27 22:43:23,759 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg3ODAzLCJleHAiOjE3NTg5OTE0MDN9.ich3mgJ6cU8BtREhCCVrhGHYbbqTgleO-5wSl8xVRTk', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 22:43:23,759 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 22:43:24,057 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000002739E07E650>
+2025-09-27 22:43:24,487 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 22:43:24,491 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 22:43:24,504 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 22:43:24,508 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 22:43:39,138 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:3 CONF:0.91
+2025-09-27 22:43:39,138 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 22:43:39,151 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:43:39,159 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:43:39,161 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:43:39,164 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 22:43:39,174 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 22:44:02,002 - INFO - User: {'id': 12} Matched detection from Camera 2 only.
+2025-09-27 22:44:02,015 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 2
+2025-09-27 22:44:02,016 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 2
+2025-09-27 22:44:02,016 - INFO - User: {'id': 12} detection from Camera 2 only. Data saved successfully
+2025-09-27 22:44:02,022 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:9 CONF:0.91
+2025-09-27 22:44:02,037 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:10 CONF:0.92
+2025-09-27 22:44:07,111 - INFO - Matched detection from Camera 1 only.
+2025-09-27 22:44:07,131 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 
+2025-09-27 22:44:07,135 - INFO - User: {'id': 12} Save C1_Model2_0.png from Matched detection from Camera 1 
+2025-09-27 22:44:07,139 - INFO - User: {'id': 12} Save C1_Model2_0.png from Matched detection from Camera 1 
+2025-09-27 22:44:07,141 - INFO - User: {'id': 12} detection from Camera 1 only. Data saved successfully
+2025-09-27 22:44:24,065 - INFO - User: {'id': 12} Matched detection from Camera 2 only.
+2025-09-27 22:44:24,078 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 2
+2025-09-27 22:44:24,081 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 2
+2025-09-27 22:44:24,081 - INFO - User: {'id': 12} detection from Camera 2 only. Data saved successfully
+2025-09-27 22:44:28,526 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:14 CONF:0.91
+2025-09-27 22:44:28,554 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:15 CONF:0.92
+2025-09-27 22:44:33,112 - INFO - Matched detection from Camera 1 only.
+2025-09-27 22:44:33,128 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 
+2025-09-27 22:44:33,130 - INFO - User: {'id': 12} Save C1_Model2_0.png from Matched detection from Camera 1 
+2025-09-27 22:44:33,130 - INFO - User: {'id': 12} detection from Camera 1 only. Data saved successfully
+2025-09-27 22:44:34,824 - INFO - User Out program.
+2025-09-27 22:44:34,826 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 22:44:43,150 - INFO - Application started
+2025-09-27 22:44:46,309 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg3ODg2LCJleHAiOjE3NTg5OTE0ODZ9.v9HLsmVuxECa79lwHtTwccz68STa3YR3k103Rk8MK78', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 22:44:46,309 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 22:44:46,586 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000026E768058D0>
+2025-09-27 22:44:47,042 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 22:44:47,054 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 22:44:47,057 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 22:44:47,060 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 22:45:01,933 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:4 CONF:0.91
+2025-09-27 22:45:01,934 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 22:45:01,947 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:45:01,960 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:45:01,962 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:45:01,966 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 22:45:01,979 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 22:45:05,475 - INFO - User Out program.
+2025-09-27 22:45:05,475 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 22:48:32,604 - INFO - Application started
+2025-09-27 22:48:35,187 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg4MTE1LCJleHAiOjE3NTg5OTE3MTV9.YNTvJZJloStZ-gv8K4zmMTX7OCDNwZ5CJk3HEKOEjio', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 22:48:35,187 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 22:48:35,473 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000029ADA2EAC50>
+2025-09-27 22:48:35,955 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 22:48:35,959 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 22:48:35,982 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 22:48:35,985 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 22:48:50,791 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:3 CONF:0.91
+2025-09-27 22:48:50,792 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 22:48:50,812 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:48:50,823 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:48:50,824 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:48:50,830 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 22:48:50,844 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 22:49:10,672 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:9 CONF:0.91
+2025-09-27 22:49:10,673 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 22:49:10,684 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:49:10,694 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:49:10,696 - INFO - User: {'id': 12} Save C1_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:49:10,697 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:49:10,702 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 22:49:10,712 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:10 CONF:0.92
+2025-09-27 22:49:29,097 - INFO - User: {'id': 12} Matched detection from Camera 2 only.
+2025-09-27 22:49:29,107 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 2
+2025-09-27 22:49:29,108 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 2
+2025-09-27 22:49:29,108 - INFO - User: {'id': 12} detection from Camera 2 only. Data saved successfully
+2025-09-27 22:49:31,166 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:14 CONF:0.91
+2025-09-27 22:49:31,180 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:15 CONF:0.92
+2025-09-27 22:49:36,038 - INFO - Matched detection from Camera 1 only.
+2025-09-27 22:49:36,050 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 
+2025-09-27 22:49:36,052 - INFO - User: {'id': 12} Save C1_Model2_0.png from Matched detection from Camera 1 
+2025-09-27 22:49:36,054 - INFO - User: {'id': 12} Save C1_Model2_0.png from Matched detection from Camera 1 
+2025-09-27 22:49:36,055 - INFO - User: {'id': 12} detection from Camera 1 only. Data saved successfully
+2025-09-27 22:49:41,876 - INFO - User Out program.
+2025-09-27 22:49:41,876 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 22:52:35,889 - INFO - Application started
+2025-09-27 22:52:38,779 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg4MzU4LCJleHAiOjE3NTg5OTE5NTh9.5B7JJ-qx_6lbUYgh2zZg_CSF0vA4zSV4RQvfo8zwhJE', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 22:52:38,779 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 22:52:39,083 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000230F0929110>
+2025-09-27 22:52:39,506 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 22:52:39,510 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 22:52:39,522 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 22:52:39,526 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 22:52:52,489 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:4 CONF:0.91
+2025-09-27 22:52:52,489 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 22:52:52,503 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:52:52,515 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:52:52,517 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:52:52,521 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 22:52:52,533 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 22:52:55,211 - INFO - User Out program.
+2025-09-27 22:52:55,211 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 22:58:21,773 - INFO - Application started
+2025-09-27 22:58:26,199 - INFO - Application started
+2025-09-27 22:58:29,295 - ERROR - Login fail ❌: {"success":false,"message":"Incorrect password"}
+2025-09-27 22:58:29,295 - INFO - Login failed for user: panitan.thainlek@gmail.com
+2025-09-27 22:58:32,493 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg4NzEyLCJleHAiOjE3NTg5OTIzMTJ9.O03QjmFPDns4PIcL2DIzFQoIcLAqEAF-zXFKfzpaonw', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 22:58:32,493 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 22:58:32,739 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000268B63864D0>
+2025-09-27 22:58:33,160 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 22:58:33,163 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 22:58:33,195 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 22:58:33,199 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 22:58:46,022 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:4 CONF:0.91
+2025-09-27 22:58:46,023 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 22:58:46,034 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:58:46,047 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:58:46,049 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 22:58:46,054 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 22:58:46,073 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 22:59:08,021 - INFO - User: {'id': 12} Matched detection from Camera 2 only.
+2025-09-27 22:59:08,032 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 2
+2025-09-27 22:59:08,033 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 2
+2025-09-27 22:59:08,033 - INFO - User: {'id': 12} detection from Camera 2 only. Data saved successfully
+2025-09-27 22:59:08,265 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:9 CONF:0.91
+2025-09-27 22:59:08,277 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:10 CONF:0.92
+2025-09-27 22:59:13,016 - INFO - Matched detection from Camera 1 only.
+2025-09-27 22:59:13,030 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 
+2025-09-27 22:59:13,032 - INFO - User: {'id': 12} Save C1_Model2_0.png from Matched detection from Camera 1 
+2025-09-27 22:59:13,034 - INFO - User: {'id': 12} Save C1_Model2_0.png from Matched detection from Camera 1 
+2025-09-27 22:59:13,034 - INFO - User: {'id': 12} detection from Camera 1 only. Data saved successfully
+2025-09-27 22:59:22,424 - INFO - User Out program.
+2025-09-27 22:59:22,424 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 23:00:44,012 - INFO - Application started
+2025-09-27 23:00:46,965 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg4ODQ2LCJleHAiOjE3NTg5OTI0NDZ9.R7eWuc-wlYC9sL7FlXarII_zxSFJqex1w1dQvcPZJo8', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 23:00:46,965 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 23:00:47,255 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000019ED181DFD0>
+2025-09-27 23:00:47,722 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 23:00:47,733 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 23:00:47,736 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 23:00:47,740 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 23:00:59,955 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:3 CONF:0.91
+2025-09-27 23:00:59,956 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 23:00:59,969 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:00:59,978 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:00:59,979 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:00:59,983 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 23:00:59,995 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 23:01:08,334 - INFO - User Out program.
+2025-09-27 23:01:08,334 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 23:05:01,617 - INFO - Application started
+2025-09-27 23:05:05,152 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg5MTA1LCJleHAiOjE3NTg5OTI3MDV9.z_3nVi2Ihj1oScLKdOIa0Ix-hsBp3cZgLY48GVSs6_I', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 23:05:05,153 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 23:05:05,455 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000002D4BC3EEE50>
+2025-09-27 23:05:05,950 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 23:05:05,961 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 23:05:05,963 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 23:05:05,964 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 23:05:18,668 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:4 CONF:0.91
+2025-09-27 23:05:18,669 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 23:05:18,682 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:05:18,692 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:05:18,693 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:05:18,696 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 23:05:18,706 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 23:05:39,693 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:9 CONF:0.91
+2025-09-27 23:05:39,694 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 23:05:39,706 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:05:39,715 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:05:39,717 - INFO - User: {'id': 12} Save C1_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:05:39,718 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:05:39,722 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 23:05:39,731 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:10 CONF:0.92
+2025-09-27 23:05:51,852 - INFO - User Out program.
+2025-09-27 23:05:51,852 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 23:06:21,529 - INFO - Application started
+2025-09-27 23:06:24,015 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg5MTg0LCJleHAiOjE3NTg5OTI3ODR9.Ft68x3Zgt0r-2StO-DShjp3PUdqMUJa47XP1yvm33mU', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 23:06:24,016 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 23:06:24,304 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000284B47FF0D0>
+2025-09-27 23:06:24,731 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 23:06:24,734 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 23:06:24,763 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 23:06:24,766 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 23:06:36,456 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:4 CONF:0.91
+2025-09-27 23:06:36,457 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 23:06:36,469 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:06:36,480 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:06:36,481 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:06:36,490 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 23:06:36,502 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 23:06:42,823 - INFO - User Out program.
+2025-09-27 23:06:42,823 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 23:08:01,304 - INFO - Application started
+2025-09-27 23:08:03,662 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg5MjgzLCJleHAiOjE3NTg5OTI4ODN9.LxYmKe4SXDxozRdAmfbiwioIk5BUScWnFhvNeSofxI4', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 23:08:03,662 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 23:08:03,938 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001194660CED0>
+2025-09-27 23:08:04,416 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 23:08:04,419 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 23:08:04,435 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 23:08:04,438 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 23:08:18,344 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:4 CONF:0.91
+2025-09-27 23:08:18,345 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 23:08:18,378 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:08:18,395 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:08:18,397 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:08:18,404 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 23:08:18,417 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 23:08:23,442 - INFO - User Out program.
+2025-09-27 23:08:23,442 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 23:10:08,110 - INFO - Application started
+2025-09-27 23:10:10,703 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg5NDEwLCJleHAiOjE3NTg5OTMwMTB9.2RhMxoOEOQJVD5vz4vdYFvAsBW3DLVAe_VJB77hDRDY', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 23:10:10,703 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 23:10:10,943 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000028B06B920D0>
+2025-09-27 23:10:11,344 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 23:10:11,346 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 23:10:11,368 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 23:10:11,371 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 23:10:24,585 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:4 CONF:0.91
+2025-09-27 23:10:24,586 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 23:10:24,599 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:10:24,611 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:10:24,614 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:10:24,616 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 23:10:24,629 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 23:10:31,032 - INFO - User Out program.
+2025-09-27 23:10:31,032 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 23:12:33,674 - INFO - Application started
+2025-09-27 23:12:35,972 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg5NTU1LCJleHAiOjE3NTg5OTMxNTV9.eJdFOr7flS_RsLipUm_HCTk74_-s8g7UvQVBi8g4rTI', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 23:12:35,972 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 23:12:36,275 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000226098AEB50>
+2025-09-27 23:12:36,702 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 23:12:36,704 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 23:12:36,718 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 23:12:36,721 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 23:12:52,309 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:4 CONF:0.91
+2025-09-27 23:12:52,309 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 23:12:52,321 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:12:52,334 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:12:52,336 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:12:52,345 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 23:12:52,363 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 23:12:55,109 - INFO - User Out program.
+2025-09-27 23:12:55,110 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 23:14:49,795 - INFO - Application started
+2025-09-27 23:14:52,281 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg5NjkyLCJleHAiOjE3NTg5OTMyOTJ9.eZJfaGrfT_ymv2YsNuzGDnumjM5TXTebmSWDSF220Yk', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 23:14:52,282 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 23:14:52,590 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x0000015924D06990>
+2025-09-27 23:14:53,056 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 23:14:53,058 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 23:14:53,073 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 23:14:53,076 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 23:15:08,497 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:4 CONF:0.91
+2025-09-27 23:15:08,498 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 23:15:08,512 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:15:08,522 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:15:08,523 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:15:08,526 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 23:15:08,539 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 23:15:10,455 - INFO - User Out program.
+2025-09-27 23:15:10,455 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 23:18:29,466 - INFO - Application started
+2025-09-27 23:18:33,563 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg5OTEzLCJleHAiOjE3NTg5OTM1MTN9.cw3SfhnRXBlIVvJC_tBJ-xcPXSSK-jNTgiFB4Zy6i8c', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 23:18:33,563 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 23:18:33,846 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000002E100230650>
+2025-09-27 23:18:34,277 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 23:18:34,280 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 23:18:34,294 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 23:18:34,297 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 23:18:47,123 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:4 CONF:0.91
+2025-09-27 23:18:47,123 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 23:18:47,136 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:18:47,145 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:18:47,146 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:18:47,149 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 23:18:47,166 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 23:18:51,891 - INFO - User Out program.
+2025-09-27 23:18:51,891 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 23:19:25,163 - INFO - Application started
+2025-09-27 23:19:27,811 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTg5OTY3LCJleHAiOjE3NTg5OTM1Njd9.iu_X2Sxfu_KPoJwGxxIxgMGAK2gya1faUlsAyXyYF0k', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 23:19:27,811 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 23:19:28,105 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001CFBA133790>
+2025-09-27 23:19:28,527 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 23:19:28,537 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 23:19:28,539 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 23:19:28,541 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 23:19:40,763 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:4 CONF:0.91
+2025-09-27 23:19:40,763 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 23:19:40,775 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:19:40,787 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:19:40,789 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:19:40,792 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 23:19:40,805 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 23:19:45,546 - INFO - User Out program.
+2025-09-27 23:19:45,546 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 23:20:25,067 - INFO - Application started
+2025-09-27 23:20:34,944 - INFO - User Out program.
+2025-09-27 23:20:34,944 - INFO - No user is currently logged in.
+2025-09-27 23:21:41,020 - INFO - Application started
+2025-09-27 23:21:48,620 - INFO - User Out program.
+2025-09-27 23:21:48,621 - INFO - No user is currently logged in.
+2025-09-27 23:22:03,302 - INFO - Application started
+2025-09-27 23:22:06,345 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTkwMTI2LCJleHAiOjE3NTg5OTM3MjZ9.4hxU4_K_wfk2TcfCwGFpeWEJM_u4I9Kg65o0WA8fbQE', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 23:22:06,345 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 23:22:06,635 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000222A144D750>
+2025-09-27 23:22:07,235 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 23:22:07,246 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 23:22:07,252 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 23:22:07,253 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 23:22:22,781 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:4 CONF:0.91
+2025-09-27 23:22:22,783 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 23:22:22,810 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:22:22,821 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:22:22,823 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:22:22,830 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 23:22:22,844 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 23:22:29,520 - INFO - User Out program.
+2025-09-27 23:22:29,520 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 23:24:39,392 - INFO - Application started
+2025-09-27 23:24:46,889 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTkwMjg2LCJleHAiOjE3NTg5OTM4ODZ9.1OTeyoWyq5IjIZZmhcuT-p9Mk3KpNpGeCjsTlY40ulI', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 23:24:46,889 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 23:24:47,189 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000195B4F7E510>
+2025-09-27 23:24:47,686 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 23:24:47,697 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 23:24:47,699 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 23:24:47,700 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 23:25:00,511 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:4 CONF:0.91
+2025-09-27 23:25:00,512 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 23:25:00,533 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:25:00,542 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:25:00,544 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:25:00,549 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 23:25:00,561 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 23:25:25,069 - INFO - User: {'id': 12} Matched detection from Camera 2 only.
+2025-09-27 23:25:25,088 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 2
+2025-09-27 23:25:25,090 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 2
+2025-09-27 23:25:25,090 - INFO - User: {'id': 12} detection from Camera 2 only. Data saved successfully
+2025-09-27 23:25:27,130 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:13 CONF:0.91
+2025-09-27 23:25:27,147 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:14 CONF:0.92
+2025-09-27 23:25:32,035 - INFO - Matched detection from Camera 1 only.
+2025-09-27 23:25:32,047 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 
+2025-09-27 23:25:32,050 - INFO - User: {'id': 12} Save C1_Model2_0.png from Matched detection from Camera 1 
+2025-09-27 23:25:32,051 - INFO - User: {'id': 12} Save C1_Model2_0.png from Matched detection from Camera 1 
+2025-09-27 23:25:32,051 - INFO - User: {'id': 12} detection from Camera 1 only. Data saved successfully
+2025-09-27 23:25:45,052 - INFO - User: {'id': 12} Matched detection from Camera 2 only.
+2025-09-27 23:25:45,066 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 2
+2025-09-27 23:25:45,068 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 2
+2025-09-27 23:25:45,068 - INFO - User: {'id': 12} detection from Camera 2 only. Data saved successfully
+2025-09-27 23:25:48,014 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:20 CONF:0.91
+2025-09-27 23:25:48,032 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:21 CONF:0.92
+2025-09-27 23:25:53,015 - INFO - Matched detection from Camera 1 only.
+2025-09-27 23:25:53,027 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 
+2025-09-27 23:25:53,029 - INFO - User: {'id': 12} Save C1_Model2_0.png from Matched detection from Camera 1 
+2025-09-27 23:25:53,029 - INFO - User: {'id': 12} detection from Camera 1 only. Data saved successfully
+2025-09-27 23:26:09,819 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:27 CONF:0.93
+2025-09-27 23:26:09,890 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:29 CONF:0.90
+2025-09-27 23:26:09,992 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-27 23:26:14,356 - ERROR - User: {'id': 12} Failed to connect to Camera 1 False
+2025-09-27 23:26:16,952 - INFO - User Out program.
+2025-09-27 23:26:16,952 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 23:32:30,640 - INFO - Application started
+2025-09-27 23:32:33,068 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTkwNzUzLCJleHAiOjE3NTg5OTQzNTN9.jPosZLz24CqyZiMwxrHIsxz4xy17KY42RHWtloAyQSE', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 23:32:33,068 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 23:32:33,359 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000230771FD290>
+2025-09-27 23:32:33,931 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 23:32:33,943 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 23:32:33,947 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 23:32:33,951 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 23:32:46,943 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:3 CONF:0.91
+2025-09-27 23:32:46,944 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 23:32:46,964 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:32:46,976 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:32:46,978 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:32:46,987 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 23:32:47,002 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 23:33:12,100 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:13 CONF:0.91
+2025-09-27 23:33:12,102 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 23:33:12,113 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:33:12,123 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:33:12,127 - INFO - User: {'id': 12} Save C1_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:33:12,129 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:33:12,132 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 23:33:12,144 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:14 CONF:0.92
+2025-09-27 23:33:17,437 - INFO - User Out program.
+2025-09-27 23:33:17,437 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 23:33:34,070 - INFO - Application started
+2025-09-27 23:37:07,569 - INFO - User Out program.
+2025-09-27 23:37:07,570 - INFO - No user is currently logged in.
+2025-09-27 23:37:11,255 - INFO - Application started
+2025-09-27 23:37:13,742 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTkxMDMzLCJleHAiOjE3NTg5OTQ2MzN9.P4fZO4FZF4s9zt7fBHKZiyBRsRDw6GXwO9EmUZQM7pQ', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 23:37:13,742 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 23:37:14,053 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000280B78B8850>
+2025-09-27 23:37:14,510 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 23:37:14,513 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 23:37:14,527 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 23:37:14,530 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 23:37:27,609 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:4 CONF:0.91
+2025-09-27 23:37:29,610 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 23:37:29,621 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:37:29,630 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:37:29,633 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:37:29,636 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 23:37:29,654 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 23:37:31,388 - INFO - User Out program.
+2025-09-27 23:37:31,388 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 23:38:11,391 - INFO - Application started
+2025-09-27 23:38:13,626 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTkxMDkzLCJleHAiOjE3NTg5OTQ2OTN9.c00w9q4BMgmDUbaVuxw5gRy8ec5czD3L6vav-dX3qr4', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 23:38:13,626 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 23:38:13,913 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x00000154A17BD350>
+2025-09-27 23:38:14,314 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 23:38:14,326 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 23:38:14,327 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 23:38:14,329 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 23:38:26,706 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:4 CONF:0.91
+2025-09-27 23:38:28,708 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 23:38:28,720 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:38:28,729 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:38:28,732 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:38:28,740 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 23:38:28,754 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 23:38:30,851 - INFO - User Out program.
+2025-09-27 23:38:30,852 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 23:39:56,707 - INFO - Application started
+2025-09-27 23:40:18,469 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTkxMjE4LCJleHAiOjE3NTg5OTQ4MTh9.eJ8Jtq9nU_pY6DNjOdPlc4e3dV7UHpPMs5ZS3eAto-I', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 23:40:18,470 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 23:40:18,767 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001625D376590>
+2025-09-27 23:40:19,314 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 23:40:19,326 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 23:40:19,328 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 23:40:19,330 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 23:40:35,012 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:4 CONF:0.91
+2025-09-27 23:40:35,013 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 23:40:35,024 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:40:35,042 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:40:35,045 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:40:35,049 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 23:40:35,059 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 23:40:55,519 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:13 CONF:0.91
+2025-09-27 23:40:55,522 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 23:40:55,533 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:40:55,544 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:40:55,548 - INFO - User: {'id': 12} Save C1_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:40:55,549 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:40:55,553 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 23:40:55,565 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:14 CONF:0.92
+2025-09-27 23:41:14,094 - INFO - User: {'id': 12} Matched detection from Camera 2 only.
+2025-09-27 23:41:14,105 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 2
+2025-09-27 23:41:14,107 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 2
+2025-09-27 23:41:14,107 - INFO - User: {'id': 12} detection from Camera 2 only. Data saved successfully
+2025-09-27 23:41:16,471 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:20 CONF:0.91
+2025-09-27 23:41:16,485 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:21 CONF:0.92
+2025-09-27 23:41:21,055 - INFO - Matched detection from Camera 1 only.
+2025-09-27 23:41:21,075 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 
+2025-09-27 23:41:21,078 - INFO - User: {'id': 12} Save C1_Model2_0.png from Matched detection from Camera 1 
+2025-09-27 23:41:21,081 - INFO - User: {'id': 12} Save C1_Model2_0.png from Matched detection from Camera 1 
+2025-09-27 23:41:21,081 - INFO - User: {'id': 12} detection from Camera 1 only. Data saved successfully
+2025-09-27 23:41:38,692 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:27 CONF:0.93
+2025-09-27 23:41:38,704 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:29 CONF:0.90
+2025-09-27 23:41:39,096 - ERROR - User: {'id': 12} Failed to connect to Camera 2 False
+2025-09-27 23:41:43,684 - ERROR - User: {'id': 12} Failed to connect to Camera 1 False
+2025-09-27 23:41:47,889 - INFO - User Out program.
+2025-09-27 23:41:47,889 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 23:46:37,789 - INFO - Application started
+2025-09-27 23:46:40,258 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTkxNjAwLCJleHAiOjE3NTg5OTUyMDB9.M-wara6EePIZmVLOialA2XyqIRphpOjZGDMNqm1Lew4', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 23:46:40,258 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 23:46:40,552 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000002630D84C550>
+2025-09-27 23:46:41,009 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 23:46:41,022 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 23:46:41,025 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 23:46:41,028 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 23:46:54,295 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:4 CONF:0.91
+2025-09-27 23:46:54,296 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 23:46:54,307 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:46:54,318 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:46:54,319 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:46:54,324 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 23:46:54,342 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 23:46:59,210 - INFO - User Out program.
+2025-09-27 23:46:59,210 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 23:49:42,361 - INFO - Application started
+2025-09-27 23:49:46,099 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTkxNzg2LCJleHAiOjE3NTg5OTUzODZ9.QsDmy2iYp22v_R7WKkoVibH0_fNNi-njtckyAYyUuSA', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 23:49:46,100 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 23:49:46,395 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001E9861E5F50>
+2025-09-27 23:49:46,814 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 23:49:46,816 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 23:49:46,829 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 23:49:46,831 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 23:49:59,708 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:4 CONF:0.91
+2025-09-27 23:49:59,718 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 23:49:59,731 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:49:59,740 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:49:59,742 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:49:59,747 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 23:49:59,747 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 23:50:03,116 - INFO - User Out program.
+2025-09-27 23:50:03,117 - INFO - Logout user: panitan.thainlek@gmail.com
+2025-09-27 23:50:31,220 - INFO - Application started
+2025-09-27 23:50:33,622 - INFO - Login Successfully : {'success': True, 'message': 'Login successful', 'token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoicGFuaXRhbi50aGFpbmxla0BnbWFpbC5jb20iLCJyb2xlIjoiYWRtaW4iLCJ1c2VybmFtZSI6ImRlbWF4MTQ1IiwiaWF0IjoxNzU4OTkxODMzLCJleHAiOjE3NTg5OTU0MzN9.vtJ-UhCGLIJUGCy_sKEMpJmAnStR0Oki3qUAlvF99qY', 'user': {'id': 12, 'email': 'panitan.thainlek@gmail.com', 'role': 'admin', 'username': 'demax145'}}
+2025-09-27 23:50:33,622 - INFO - Login successful for user: panitan.thainlek@gmail.com
+2025-09-27 23:50:33,911 - INFO - Database connected: <mysql.connector.pooling.PooledMySQLConnection object at 0x000001F907402150>
+2025-09-27 23:50:34,325 - INFO - User: {'id': 12} Camera 02 opened successfully.
+2025-09-27 23:50:34,327 - INFO - User: {'id': 12} connect to Camera 2
+2025-09-27 23:50:34,341 - INFO - User: {'id': 12} Camera 01 opened successfully.
+2025-09-27 23:50:34,343 - INFO - User: {'id': 12} connect to Camera 1
+2025-09-27 23:50:47,480 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:4 CONF:0.91
+2025-09-27 23:50:47,490 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2
+2025-09-27 23:50:47,504 - INFO - User: {'id': 12} Save C1_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:50:47,515 - INFO - User: {'id': 12} Save C2_Model1_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:50:47,518 - INFO - User: {'id': 12} Save C2_Model2_0.png from Matched detection from Camera 1 and Camera 2
+2025-09-27 23:50:47,523 - INFO - User: {'id': 12} Matched detection from Camera 1 and Camera 2. Data saved successfully
+2025-09-27 23:50:47,524 - INFO - User: {'id': 12} Motorcycle detected on Camera 1 ID:5 CONF:0.92
+2025-09-27 23:50:51,603 - INFO - User Out program.
+2025-09-27 23:50:51,603 - INFO - Logout user: panitan.thainlek@gmail.com
