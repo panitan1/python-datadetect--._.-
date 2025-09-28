@@ -185,7 +185,7 @@ class APP_SY_Frame(ctk.CTkFrame):
         self.My_cap1()
         self.model = YOLO("best2.pt").cuda()
         self.cam01 = cv2.VideoCapture(
-            "rtsp://admin:Demaxzzo001@192.168.1.133:554/cam/realmonitor?channel=1&subtype=0"
+            "rtsp://admin:@192.168.1.133:554/cam/realmonitor?channel=1&subtype=0"
         )
         
 
@@ -348,7 +348,7 @@ class APP_SY_Frame(ctk.CTkFrame):
         self.My_cap2()
         self.model22 = YOLO("best.pt").cuda()
         self.cam02 = cv2.VideoCapture(
-            "rtsp://admin:Demaxzzo001@192.168.1.134:554/cam/realmonitor?channel=1&subtype=0"
+            "rtsp://admin:@192.168.1.134:554/cam/realmonitor?channel=1&subtype=0"
         )
         if not self.cam02.isOpened():
             self.master_log_set.error(f"User: {self.user_email} Failed to open Camera 02.")
